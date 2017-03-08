@@ -1,0 +1,34 @@
+language: python
+
+python:
+  - 2.7
+  - 3.3
+  - 3.4
+  - 3.5
+
+env:
+  - DJANGO=Django==1.8.17
+  - DJANGO=Django==1.9.12
+  - DJANGO=Django==1.10.4
+
+matrix:
+  exclude:
+    - python: 3.3
+      env: DJANGO=Django==1.9.12
+    - python: 3.3
+      env: DJANGO=Django==1.10.4
+
+install:
+  - pip install -r requirements.txt
+  - pip install -q $DJANGO
+  - python setup.py -q install
+
+before_script:
+  - rm -rf build
+
+script:
+  - flake8
+  - coverage run --source=registration setup.py test
+
+after_success:
+  - coveralls --verbose
