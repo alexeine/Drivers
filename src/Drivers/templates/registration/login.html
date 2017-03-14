@@ -31,15 +31,23 @@
 <div class="b-inputs b-inputs--login">
  
 
-   
-    <form method="post" action="">
+    <form class="b-form" method="post" action="">
      {% csrf_token %}
-    <input type="hidden" name="csrfmiddlewaretoken" value="eB2KNEY9mxVBxHVtia7Rz18Q424qXoMvLveqBnw79IGdb5MRwXpLy2Z27yzupwOS">
-    <p><label for="id_username">Username:</label> <input autofocus="" id="id_username" maxlength="254" name="username" type="text" required=""></p>
-    <p><label for="id_password">Password:</label> <input id="id_password" name="password" type="password" required=""></p>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <p><label class="mdl-textfield__label" for="email">Введіть свій email</label>
+     <input class="mdl-textfield__input" autofocus="" id="id_username" maxlength="100" name="username" type="text" required=""></p>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+   
+    <p><label class="mdl-textfield__label" for="password">Введіть свій пароль</label> <input class="mdl-textfield__input" id="id_password" name="password" type="password" required=""></p>
+    </div>
     <input type="submit" value="Log in">
-    <input type="hidden" name="next" value="">
+    <input type="hidden" name="next" value="" />
+
 </form>
+
+
  {% comment %}
     <form class="b-form" >
     
