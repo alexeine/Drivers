@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/start.css' %}">
+    <!--
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <script src="js/lib/es5-shim.min.js"></script>
+    -->
+</head>
+<body class="login">
+<div class="b-holder">
+    <iframe
+            class="b-video"
+            id="video"
+            src="https://www.youtube.com/embed/X3LULOqC5tI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&enablejsapi=1&playlist=W0LHTWG-UmQ"
+            frameborder="0"
+            allowfullscreen
+    >
+    </iframe>
+</div>
+<div class="b-inputs b-inputs--login">
+    <form class="b-form" >
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="email">
+            <label class="mdl-textfield__label" for="email">Введіть свій email</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="password">
+            <label class="mdl-textfield__label" for="password">Введіть свій пароль</label>
+        </div>
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" >
+        <input type="hidden" name="next" value="{{ next }}" />
+            Почати моделювання
+        </a>
+       
+    </form>
+</div>
+<script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'landing/js/lib/material.min.js' %}"></script>
+<script src="{% static 'landing/js/validate.js' %}"></script>
+<script src="{% static 'landing/js/starting.js' %}"></script>
+<script src="{% static 'landing/js/main.js' %}"></script>
+</body>
+</html>

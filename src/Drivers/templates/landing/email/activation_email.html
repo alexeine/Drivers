@@ -1,0 +1,31 @@
+{% load i18n %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ site.name }} {% trans "registration" %}</title>
+</head>
+
+<body>
+<p>
+    {% blocktrans with site_name=site.name %}
+    Ви (або хтось, хто видає себе за Вас) запросив пароль для входу на
+    {{ site_name }}.  
+    {% endblocktrans %}
+</p>
+
+
+<p>
+    123456789
+</p>
+<p>
+    {% blocktrans with site_name=site.name %}
+    З повагою,
+    {{ site_name }} Адміністрація.
+    {% endblocktrans %}
+</p>
+</body>
+
+</html>
+
+

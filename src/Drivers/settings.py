@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+BASE_DIR = os.path.join(BASE_DIR1, 'Drivers')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -23,11 +23,11 @@ SECRET_KEY = '%ho2$7t6u8t#(iq8-7r)$^p@u^(*q)aa@uzp1tump=4l&=i6ar'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-SITE_ID = 1
+
 ALLOWED_HOSTS = []
 
-
 # Application definition
+SITE_ID =1
 
 INSTALLED_APPS = [
 	
@@ -39,10 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'imagekit',
+
     
 ]
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 REGISTRATION_AUTO_LOGIN = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,7 +63,9 @@ ROOT_URLCONF = 'Drivers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+           os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,11 +78,13 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'Drivers.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -88,7 +96,6 @@ DATABASES = {
         'PORT' : '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -126,4 +133,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+	#'/home/brutal/Drivers/src/Drivers/static',
+]
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('ru', 'Русский'),
+)
+
+#Email
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'brutalsuperman999@gmail.com'
+EMAIL_HOST_PASSWORD = 'rfnsymrf'
+EMAIL_PORT = 587
+
+#registry
+ACCOUNT_ACTIVATION_DAYS = 1
+REGISTRATION_EMAIL_HTML = True
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = "/main"

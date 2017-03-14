@@ -1,0 +1,63 @@
+.b-holder,
+.b-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+@media (min-aspect-ratio: 16/9) {
+    .b-holder { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .b-holder { width: 300%; left: -100%; }
+}
+.b-inputs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 430px;
+    background: #eeeeee;
+    z-index: 20;
+    padding: 55px 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.b-inputs--login {
+    width: 430px;
+    height: 320px;
+}
+.b-button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    display: block;
+    width: 180px;
+    float: right;
+    margin-right: 65px;
+    margin-top: 30px;
+}
+/*customize for material-design elements*/
+.mdl-textfield__label:after {
+    background-color: #549788;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #549788;
+}
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+    color: #549788;
+}
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    height: 36px;
+    line-height: 36px;
+    font-size: 12px;
+}
+.mdl-textfield {
+    display: block;
+    margin: 0 auto;
+    padding: 35px 0 20px;
+}
