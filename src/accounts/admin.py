@@ -8,7 +8,7 @@ from .models import Profile
 class ProfileInline(admin.StackedInline):
     model = Profile
     fields = ('user','image_thumb', 'avatar_thumbnail',  'slug', 'email', 'position', 'investment', 'area',
-     'company', 'holding', 'cluster', 'total', 'ebitda', 'userInvestment',  'teamInvestment1', 
+     'company', 'holding', 'cluster', 'total', 'ebitda', 'userInvestment', 'passw', 'teamInvestment1', 
      'teamInvestment2', 'rentability', 'investmentRentability', )
     readonly_fields = ['image_thumb','email']
     inline_classes = ('grp-open',)
@@ -25,6 +25,6 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'slug',)
     search_fields = ('user__username',)
     fields = ('user', 'image_thumb', 'avatar_thumbnail',  'slug', 'email', 'position', 'investment', 'area',
-     'company', 'holding', 'cluster', 'total', 'ebitda', 'userInvestment',  'teamInvestment1', 
+     'company', 'holding', 'cluster', 'total', 'ebitda', 'userInvestment', 'passw',  'teamInvestment1', 
      'teamInvestment2', 'rentability', 'investmentRentability', )
     readonly_fields = ['image_thumb','email']

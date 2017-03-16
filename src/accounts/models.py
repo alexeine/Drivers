@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
 
+from uuid import uuid4
 from slugify import UniqueSlugify
 from imagekit.processors import Adjust
 from imagekit.processors import ResizeToFill
@@ -40,22 +41,25 @@ class Profile(models.Model):
                                            processors=[ResizeToFill(400, 400), Adjust(sharpness=1.1, contrast=1.1)],
                                            format='JPEG',
                                            options={'quality': 90}, null=True, blank=True)
-    #password = models.CharField(max_length=20)
+    
     email = models.EmailField()
     position = models.CharField(max_length=20)
     investment = models.IntegerField()
-    area = models.FloatField()
+    area = models.IntegerField()
     company = models.CharField(max_length=20)
     holding = models.CharField(max_length=20)
     cluster = models.CharField(max_length=5)
     total = models.IntegerField()
     ebitda = models.IntegerField()
     userInvestment = models.IntegerField()
+    passw = models.CharField(max_length=20, default="")
 
+    companyWeight = models.IntegerField(default=5)
     teamInvestment1 = models.IntegerField()
     teamInvestment2 = models.IntegerField()
     rentability = models.FloatField()
     investmentRentability = models.FloatField()
+    
 
     slug = models.SlugField(unique=True, max_length=100)
     

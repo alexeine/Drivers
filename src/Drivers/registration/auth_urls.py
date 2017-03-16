@@ -15,5 +15,10 @@ urlpatterns = [
         auth_views.logout,
         {'template_name': 'registration/logout.html'},
         name='auth_logout'),
-    
+    url(r'^$', auth_views.password_reset,
+        {'post_reset_redirect': reverse_lazy('auth_password_reset_done')},
+        name='auth_password_reset'),
+     url(r'^password/reset/done/$',
+        auth_views.password_reset_done,
+        name='auth_password_reset_done'),
 ]

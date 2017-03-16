@@ -16,31 +16,32 @@
     -->
 </head>
 <body class="login">
-<div class="b-holder">
-    <iframe
-            class="b-video"
-            id="video"
-            src="https://www.youtube.com/embed/X3LULOqC5tI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&enablejsapi=1&playlist=W0LHTWG-UmQ"
-            frameborder="0"
-            allowfullscreen
-    >
-    </iframe>
-</div>
-<div class="b-inputs">
-    <form class="b-form" >
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="email">
-            <label class="mdl-textfield__label" for="email">Введіть свій email</label>
-        </div>
-        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="login ">
-                Отправить пароль
-        </a>
-    </form>
-</div>
+    <div class="b-holder">
+        <iframe
+                class="b-video"
+                id="video"
+                src="https://www.youtube.com/embed/X3LULOqC5tI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&enablejsapi=1&playlist=W0LHTWG-UmQ"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <div class="b-inputs">
+        <form class="b-form" method="post" >
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="email">
+                <label class="mdl-textfield__label" for="email">Введіть свій email</label>
+            </div>
+            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="login ">
+                    Отправить пароль
+            </a>
+        </form>
+    </div>
+    
+
 <script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
 <script src="{% static 'landing/js/lib/material.min.js' %}"></script>
 <script src="{% static 'landing/js/validate.js' %}"></script>
 <script src="{% static 'landing/js/starting.js' %}"></script>
-<script src="{% static 'landing/js/main.js' %}"></script>
+<script src="{% static 'landing/js/lang.js' %}"></script>
 </body>
 </html>

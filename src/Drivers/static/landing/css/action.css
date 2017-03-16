@@ -1,0 +1,129 @@
+.i-container {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 140px);
+    padding: 30px 30px 90px 30px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+    z-index: 10;
+}
+.b-holder {
+    overflow: hidden;
+}
+.b-holder--image {
+    background: #ffc000;
+}
+.b-data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.b-data__item {
+    padding: 0;
+    font-size: 0;
+}
+.b-data__name {
+    display: inline-block;
+    line-height: 70px;
+    font-size: 16px;
+}
+.b-data__value {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: inline-block;
+    margin-left: 16px;
+    line-height: 70px;
+    font-size: 18px;
+}
+.b-params {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+.b-params__item {
+    margin-bottom: 60px;
+}
+.b-params__name {
+    display: inline-block;
+    color: #b5b5b5;
+    font-size: 1.2em;
+    line-height: 1;
+}
+.b-params__value {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    color: #009688;
+    font-size: 1.6em;
+}
+.b-button {
+   bottom: 16px;
+    top: auto;
+}
+.b-data__input-holder {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+}
+.b-fake {
+    position: absolute;
+    bottom: 50px;
+    height: 2px;
+    width: calc(100% - 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #bebebe;
+    z-index: 10;
+}
+.b-fake--overlay {
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 0;
+    left: 0;
+    background: #009688;
+}
+.b-point {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #b0b0b0;
+    display: none;
+    z-index: 50;
+}
+.js-done {
+    background: #009688;
+}
+.js-current {
+    left: 0;
+    z-index: 100;
+    transition: left 0.5s ease;
+}
+.js-prev {
+    left: -100%;
+    transition: left 0.5s ease;
+}
+.js-next {
+    left: 100%;
+}
+.js-hidden {
+    display: none;
+}
+.mdl-slider {
+    margin: 0 0 0 1px;
+}
+.mdl-slider__background-flex {
+    margin: 0 13px;
+}
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    font-size: 1.1em;
+    width: calc(100% - 32px);
+    left: 50%;
+    transform: translateX(-50%);
+}

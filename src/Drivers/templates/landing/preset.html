@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css">
+    <!--
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <script src="js/lib/es5-shim.min.js"></script>
+    -->
+</head>
+<body class="main">
+<header class="b-header">
+    <ul class="b-userdata b-userdata--first">
+        <li class="b-userdata__item b-userdata__item--name">
+            <div class="b-userdata__image"></div>
+            <div data-target="name" class="b-userdata__primary"></div>
+            <div data-target="email" class="b-userdata__secondary"></div>
+            <div class="b-menu">
+                <ul class="b-data">
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="position" class="b-userdata__secondary"></div>
+            <div data-target="position" class="b-userdata__primary"></div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="investment" class="b-userdata__secondary"></div>
+            <div data-target="investment" class="b-userdata__primary"></div>
+        </li>
+    </ul>
+    <ul class="b-userdata b-userdata b-userdata--second">
+        <li class="b-userdata__item">
+            <div data-lang="area" class="b-userdata__secondary"></div>
+            <div data-target="area" class="b-userdata__primary"></div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="company" class="b-userdata__secondary"></div>
+            <div data-target="company" class="b-userdata__primary"></div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="holding" class="b-userdata__secondary"></div>
+            <div data-target="holding" class="b-userdata__primary"></div>
+        </li>
+        <li class="b-userdata__item b-userdata__item--last">
+            <div data-lang="cluster" class="b-userdata__secondary"></div>
+            <div data-target="cluster" class="b-userdata__primary cluster"></div>
+        </li>
+    </ul>
+</header>
+<div class="i-container">
+    <div class="b-holder">
+        <ul class="b-data">
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="total" class="b-data__name">
+                </div>
+                <div data-lang="totalInfo" class="b-data__text">
+                </div>
+                <div data-target="total" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="ebitda" class="b-data__name">
+                </div>
+                <div data-lang="ebitdaInfo" class="b-data__text">
+                </div>
+                <div data-target="ebitda" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="ebitdaForHa" class="b-data__name">
+                </div>
+                <div data-lang="ebitdaForHaInfo" class="b-data__text">
+                </div>
+                <div data-target="ebitdaForHa" class="b-data__value">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder">
+        <ul class="b-data">
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="investment" class="b-data__name">
+                </div>
+                <div data-lang="investmentInfo" class="b-data__text">
+                </div>
+                <div data-target="investment" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="teamInvestment1" class="b-data__name">
+                </div>
+                <div data-lang="teamInvestment1Info" class="b-data__text">
+                </div>
+                <div data-target="teamInvestment1" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="teamInvestment2" class="b-data__name">
+                </div>
+                <div data-lang="teamInvestment2Info" class="b-data__text">
+                </div>
+                <div data-target="teamInvestment2" class="b-data__value">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder">
+        <ul class="b-data">
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="rentability" class="b-data__name">
+                </div>
+                <div data-lang="rentabilityInfo" class="b-data__text">
+                </div>
+                <div data-target="rentability" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="investmentRentability" class="b-data__name">
+                </div>
+                <div data-lang="investmentRentabilityInfo" class="b-data__text">
+                </div>
+                <div data-target="investmentRentability" class="b-data__value">
+                </div>
+            </li>
+            <li class="b-data__item">
+                <div class="b-data__image"></div>
+                <div data-lang="profit" class="b-data__name">
+                </div>
+                <div data-lang="profitInfo" class="b-data__text">
+                </div>
+                <div data-target="profit" class="b-data__value b-data__value--green">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--subplant">
+        <h2 data-lang="distribution" class="b-title"></h2>
+        <div class="b-holder__flex">
+            <div class="b-chart">
+                <canvas id="myChart" width="200" height="200"></canvas>
+            </div>
+            <ul class="b-data b-data--subplant">
+                <li class="b-data__item b-data__item--subplant">
+                    <div class="b-data__image b-data__image--wheat"></div>
+                    <div data-target="plant1" class="b-data__name">
+                        Озима пшениця
+                    </div>
+                    <div data-target="plantArea" class="b-data__total"></div>
+                    <div data-target="plantPercent" class="b-data__percent"></div>
+                </li>
+                <li class="b-data__item b-data__item--subplant">
+                    <div class="b-data__image b-data__image--rapeseed"></div>
+                    <div data-target="plant2" class="b-data__name">
+                        Озимий рапс
+                    </div>
+                    <div data-target="plantArea" class="b-data__total"></div>
+                    <div data-target="plantPercent" class="b-data__percent"></div>
+                </li>
+                <li class="b-data__item b-data__item--subplant">
+                    <div class="b-data__image b-data__image--soybean"></div>
+                    <div data-target="plant3" class="b-data__name">
+                        Соя
+                    </div>
+                    <div data-target="plantArea" class="b-data__total"></div>
+                    <div data-target="plantPercent" class="b-data__percent"></div>
+                </li>
+                <li class="b-data__item b-data__item--subplant">
+                    <div class="b-data__image b-data__image--corn"></div>
+                    <div data-target="plant4" class="b-data__name">
+                        Кукурудза
+                    </div>
+                    <div data-target="plantArea" class="b-data__total"></div>
+                    <div data-target="plantPercent" class="b-data__percent"></div>
+                </li>
+                <li class="b-data__item b-data__item--subplant">
+                    <div class="b-data__image b-data__image--sunflower"></div>
+                    <div data-target="plant5" class="b-data__name">
+                        Соняшник
+                    </div>
+                    <div data-target="plantArea" class="b-data__total"></div>
+                    <div data-target="plantPercent" class="b-data__percent"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-holder b-holder--plant">
+        <h2 data-lang="areaTitle" class="b-title"></h2>
+        <ul class="b-data">
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--wheat"></div>
+                <div data-target="plant1" class="b-data__name">
+                    Озима пшениця
+                </div>
+                <div class="b-data__input-holder">
+                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
+                           min="0" max="100" value="0" tabindex="0" step="5">
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--rapeseed"></div>
+                <div data-target="plant2" class="b-data__name">
+                    Озимий рапс
+                </div>
+                <div class="b-data__input-holder">
+                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
+                           min="0" max="100" value="0" tabindex="0" step="5">
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--soybean"></div>
+                <div data-target="plant3" class="b-data__name">
+                    Соя
+                </div>
+                <div class="b-data__input-holder">
+                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
+                           min="0" max="100" value="0" tabindex="0" step="5">
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--corn"></div>
+                <div data-target="plant4" class="b-data__name">
+                    Кукурудза
+                </div>
+                <div class="b-data__input-holder">
+                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
+                           min="0" max="100" value="0" tabindex="0" step="5">
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--sunflower"></div>
+                <div data-target="plant5" class="b-data__name">
+                    Соняшник
+                </div>
+                <div class="b-data__input-holder">
+                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
+                           min="0" max="100" value="0" tabindex="0" step="5">
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <h2 data-lang="settings" class="b-title"></h2>
+            <ul class="b-settings">
+                <li class="b-settings__item b-settings__item--first">
+                    <div data-lang="lang" class="b-settings__title b-settings__title"></div>
+                    <div data-lang="currentLang" class="b-picker">
+                    </div>
+                    <ul class="b-languages">
+                        <li data-lang="currentLang" data-value="current" class="b-languages__item b-languages__item--current"></li>
+                        <li data-value="ua" class="b-languages__item">Українська</li>
+                        <li data-value="ru" class="b-languages__item">Русский</li>
+                        <li data-value="en" class="b-languages__item">English</li>
+                    </ul>
+                </li>
+                <li class="b-settings__item b-settings__item--big">
+                    <div data-lang="type" class="b-settings__title"></div>
+                    <div class="b-settings__switch">
+                        <div data-lang="typeName1" class="b-settings__info b-settings__info--first b-settings__info--current"></div>
+                        <label for="switch" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+                            <input type="checkbox" id="switch" class="mdl-switch__input">
+                        </label>
+                        <div data-lang="typeName2" class="b-settings__info b-settings__info--second"></div>
+                    </div>
+                </li>
+                <li class="b-settings__item">
+                    <div data-lang="save" class="b-settings__title"></div>
+                    <div class="b-setting__checkbox">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="save">
+                            <input type="checkbox" id="save" class="mdl-checkbox__input">
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="action.html">
+        </a>
+    </div>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/getData.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/chart/Chart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,43 +8,50 @@
     <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
-    <!--
-    <script src="js/lib/html5shiv.js"></script>
-    <script src="js/lib/respond.min.js"></script>
-    <script src="js/lib/es5-shim.min.js"></script>
-    -->
+   
 </head>
+
 <body class="main">
 <header class="b-header">
     <ul class="b-userdata">
         <li class="b-userdata__item b-userdata__item--name">
-            <div class="b-userdata__image"></div>
-            <div data-target="name" class="b-userdata__primary"></div>
-            <div data-target="email" class="b-userdata__secondary"></div>
+            <div class="b-userdata__image"> </div>
+            <div data-target="name" class="b-userdata__primary">
+            {{ user.get_full_name}}</div>
+            <div data-target="email" class="b-userdata__secondary">
+            {{user.email}}</div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Ваша посада:</div>
-            <div data-target="position" class="b-userdata__primary"></div>
+            <div data-target="position" class="b-userdata__primary">
+            	{{ user.profile.position}}
+            </div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Ваша iнвестицiя:</div>
-            <div data-target="investment" class="b-userdata__primary"></div>
+            <div data-target="investment" class="b-userdata__primary">
+            {{ user.profile.investment}}  $</div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Площа</div>
-            <div data-target="area" class="b-userdata__primary"></div>
+            <div data-target="area" class="b-userdata__primary">
+            {{ user.profile.area}}  га </div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Компанiя</div>
-            <div data-target="company" class="b-userdata__primary"></div>
+            <div data-target="company" class="b-userdata__primary">
+            {{ user.profile.company}}</div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Холдинг</div>
-            <div data-target="holding" class="b-userdata__primary"></div>
+            <div data-target="holding" class="b-userdata__primary">
+            	{{ user.profile.holding}}
+            </div>
         </li>
         <li class="b-userdata__item">
             <div class="b-userdata__secondary">Кластер</div>
-            <div data-target="cluster" class="b-userdata__primary cluster"></div>
+            <div data-target="cluster" class="b-userdata__primary cluster">
+            {{ user.profile.cluster}}</div>
         </li>
     </ul>
 </header>
@@ -61,7 +67,7 @@
                     Загальна сума РК АПЗ
                 </div>
                 <div data-target="total" class="b-data__value">
-                </div>
+                {{ user.profile.total}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -72,7 +78,7 @@
                     Прибуток за виключенням інтересу, податків та амортизації
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                </div>
+                {{ user.profile.ebitda}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -98,7 +104,7 @@
                     Загальна сума вашого вкладу
                 </div>
                 <div data-target="investment" class="b-data__value">
-                </div>
+                {{ user.profile.userInvestment}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -109,7 +115,7 @@
                     Загальний вклад команди механізаторів
                 </div>
                 <div data-target="teamInvestment1" class="b-data__value">
-                </div>
+                {{ user.profile.teamInvestment1}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -120,7 +126,7 @@
                     Secondary text
                 </div>
                 <div data-target="teamInvestment2" class="b-data__value">
-                </div>
+                {{ user.profile.teamInvestment2}}  $</div>
             </li>
         </ul>
     </div>
@@ -135,18 +141,17 @@
                     Рентабельність капіталу АПЗ
                 </div>
                 <div data-target="rentability" class="b-data__value">
-                </div>
+                {{ user.profile.rentability}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
                 <div class="b-data__name">
-                    Рентабельність інвестиції
-                </div>
+                    Рентабельність інвестиції   </div>
                 <div class="b-data__text">
                     Рентабельність інвестицій учасників партнерської програми
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                </div>
+                {{ user.profile.investmentRentability}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -233,10 +238,10 @@
         </a>
     </div>
 </div>
+
+
 <script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
-<script src="{% static 'landing/js/getData.js' %}"></script>
 <script src="{% static 'landing/js/lib/material.min.js' %}"></script>
-<script src="{% static 'landing/js/lib/chart/Chart.js' %}"></script>
 <script src="{% static 'landing/js/main.js' %}"></script>
 </body>
 </html>
