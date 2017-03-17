@@ -15,7 +15,8 @@
 <header class="b-header">
     <ul class="b-userdata">
         <li class="b-userdata__item b-userdata__item--name">
-            <div class="b-userdata__image"> </div>
+            
+            <img alt="" id="image_avatar" class="b-userdata__image" src="{{ user.profile.get_avatar }}">
             <div data-target="name" class="b-userdata__primary">
             {{ user.get_full_name}}</div>
             <div data-target="email" class="b-userdata__secondary">

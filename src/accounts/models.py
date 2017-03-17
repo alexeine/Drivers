@@ -38,7 +38,7 @@ class Profile(models.Model):
     
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar_thumbnail = ProcessedImageField(upload_to=UploadToPathAndRename('avatars'),
-                                           processors=[ResizeToFill(400, 400), Adjust(sharpness=1.1, contrast=1.1)],
+                                           processors=[ResizeToFill(36, 36), Adjust(sharpness=1.1, contrast=1.1)],
                                            format='JPEG',
                                            options={'quality': 90}, null=True, blank=True)
     
@@ -65,9 +65,9 @@ class Profile(models.Model):
     
     def image_thumb(self):
         if self.avatar_thumbnail:
-            return '<img src="{0}{1}" width="100" height="100" />'.format(settings.MEDIA_URL, self.avatar_thumbnail)
+            return '<img src="{0}{1}" width="36" height="36" />'.format(settings.MEDIA_URL, self.avatar_thumbnail)
         else:
-            return '<img src="{0}default/default-avatar.jpg" width="100" height="100" />'.format(settings.STATIC_URL)
+            return '<img src="{0}accounts/default/default-avatar.jpg" width="36" height="36" />'.format(settings.STATIC_URL)
     image_thumb.allow_tags = True
    
     def get_absolute_url(self):
@@ -77,7 +77,7 @@ class Profile(models.Model):
         if self.avatar_thumbnail:
             return self.avatar_thumbnail.url
         else:
-            return '{}default/default-avatar.jpg'.format(settings.STATIC_URL)
+            return '{}accounts/default/default-avatar.jpg'.format(settings.STATIC_URL)
     
     def __str__(self):
         return self.user.username

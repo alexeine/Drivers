@@ -148,6 +148,9 @@ LANGUAGES = (
 )
 
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 #Email
 EMAIL_USE_TLS = True
