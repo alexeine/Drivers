@@ -9,4 +9,4 @@ class StartPageView(TemplateView):
 
 
 class Main(TemplateView):
-	template_name = 'landing/main.html'
+	template_name = 'landing/preset.html'

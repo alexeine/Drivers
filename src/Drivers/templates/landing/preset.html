@@ -1,24 +1,25 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Drive</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/main.css">
-    <!--
-    <script src="js/lib/html5shiv.js"></script>
-    <script src="js/lib/respond.min.js"></script>
-    <script src="js/lib/es5-shim.min.js"></script>
-    -->
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+   
 </head>
 <body class="main">
 <header class="b-header">
     <ul class="b-userdata b-userdata--first">
         <li class="b-userdata__item b-userdata__item--name">
             <div class="b-userdata__image"></div>
-            <div data-target="name" class="b-userdata__primary"></div>
-            <div data-target="email" class="b-userdata__secondary"></div>
+            <div data-target="name" class="b-userdata__primary">
+            {{ user.get_full_name}}</div>
+            <div data-target="email" class="b-userdata__secondary">
+            {{user.email}}</div>
             <div class="b-menu">
                 <ul class="b-data">
                     <li class="b-data__item">
@@ -32,29 +33,35 @@
         </li>
         <li class="b-userdata__item">
             <div data-lang="position" class="b-userdata__secondary"></div>
-            <div data-target="position" class="b-userdata__primary"></div>
+            <div data-target="position" class="b-userdata__primary">
+            {{ user.profile.position}}</div>
         </li>
         <li class="b-userdata__item">
             <div data-lang="investment" class="b-userdata__secondary"></div>
-            <div data-target="investment" class="b-userdata__primary"></div>
+            <div data-target="investment" class="b-userdata__primary">
+            {{ user.profile.investment}}  $</div>
         </li>
     </ul>
     <ul class="b-userdata b-userdata b-userdata--second">
         <li class="b-userdata__item">
             <div data-lang="area" class="b-userdata__secondary"></div>
-            <div data-target="area" class="b-userdata__primary"></div>
+            <div data-target="area" class="b-userdata__primary">
+            {{ user.profile.area}}  га</div>
         </li>
         <li class="b-userdata__item">
             <div data-lang="company" class="b-userdata__secondary"></div>
-            <div data-target="company" class="b-userdata__primary"></div>
+            <div data-target="company" class="b-userdata__primary">
+            {{ user.profile.company}}</div>
         </li>
         <li class="b-userdata__item">
             <div data-lang="holding" class="b-userdata__secondary"></div>
-            <div data-target="holding" class="b-userdata__primary"></div>
+            <div data-target="holding" class="b-userdata__primary">
+            {{ user.profile.holding}}</div>
         </li>
         <li class="b-userdata__item b-userdata__item--last">
             <div data-lang="cluster" class="b-userdata__secondary"></div>
-            <div data-target="cluster" class="b-userdata__primary cluster"></div>
+            <div data-target="cluster" class="b-userdata__primary cluster">
+            {{ user.profile.cluster}}</div>
         </li>
     </ul>
 </header>
@@ -68,7 +75,7 @@
                 <div data-lang="totalInfo" class="b-data__text">
                 </div>
                 <div data-target="total" class="b-data__value">
-                </div>
+                {{ user.profile.total}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -77,7 +84,7 @@
                 <div data-lang="ebitdaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                </div>
+                {{ user.profile.ebitda}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -99,7 +106,7 @@
                 <div data-lang="investmentInfo" class="b-data__text">
                 </div>
                 <div data-target="investment" class="b-data__value">
-                </div>
+                {{ user.profile.userInvestment}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -108,7 +115,7 @@
                 <div data-lang="teamInvestment1Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment1" class="b-data__value">
-                </div>
+                {{ user.profile.teamInvestment1}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -117,7 +124,7 @@
                 <div data-lang="teamInvestment2Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment2" class="b-data__value">
-                </div>
+                {{ user.profile.teamInvestment2}}  $</div>
             </li>
         </ul>
     </div>
@@ -130,7 +137,7 @@
                 <div data-lang="rentabilityInfo" class="b-data__text">
                 </div>
                 <div data-target="rentability" class="b-data__value">
-                </div>
+                {{ user.profile.rentability}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -139,7 +146,7 @@
                 <div data-lang="investmentRentabilityInfo" class="b-data__text">
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                </div>
+                {{ user.profile.investmentRentability}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -301,11 +308,11 @@
         </a>
     </div>
 </div>
-<script src="js/lib/jquery.min.js"></script>
-<script src="js/getData.js"></script>
-<script src="js/lang.js"></script>
-<script src="js/lib/material.min.js"></script>
-<script src="js/lib/chart/Chart.js"></script>
-<script src="js/main.js"></script>
+
+<script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'landing/js/lang.js'%}"></script>
+<script src="{% static 'landing/js/lib/material.min.js'%}"></script>
+<script src="{% static 'landing/js/lib/chart/Chart.js'%}"></script>
+<script src="{% static 'landing/js/main.js'%}"></script>
 </body>
 </html>
