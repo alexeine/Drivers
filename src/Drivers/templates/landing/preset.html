@@ -15,7 +15,9 @@
 <header class="b-header">
     <ul class="b-userdata b-userdata--first">
         <li class="b-userdata__item b-userdata__item--name">
-            <div class="b-userdata__image"></div>
+            <div class="b-userdata__image">
+             <img alt="" id="image_avatar" class="img-thumbnail" src="{{ user.profile.get_avatar }}">
+            </div>
             <div data-target="name" class="b-userdata__primary">
             {{ user.get_full_name}}</div>
             <div data-target="email" class="b-userdata__secondary">
@@ -93,7 +95,7 @@
                 <div data-lang="ebitdaForHaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitdaForHa" class="b-data__value">
-                </div>
+                {{ request.user.profile.get_ebitda_per_area }}  $</div>
             </li>
         </ul>
     </div>
@@ -304,8 +306,9 @@
                 </li>
             </ul>
         </div>
-        <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="action.html">
+        <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="action">
         </a>
+
     </div>
 </div>
 

@@ -10,3 +10,7 @@ class StartPageView(TemplateView):
 
 class Main(TemplateView):
 	template_name = 'landing/preset.html'
+
+
+class Action(TemplateView):
+	template_name = 'landing/action.html'

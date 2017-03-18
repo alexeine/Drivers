@@ -82,6 +82,9 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
+    def get_ebitda_per_area(self):
+        return int(float(self.ebitda)/self.area)
+
 def my_unique_check(text, uids):
     if text in uids:
         return False

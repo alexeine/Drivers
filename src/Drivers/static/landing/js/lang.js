@@ -2,7 +2,7 @@ var $current = JSON.parse(localStorage.getItem('lang')) || 'en';
 
 function getLang() {
     $.ajax({
-        url: '../../static/locale' + $current + '.json',
+        url: '../../static/locale/' + $current + '.json',
         type: 'get',
         dataType: 'json',
         error: function(data){
