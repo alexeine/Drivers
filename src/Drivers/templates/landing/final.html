@@ -1,0 +1,317 @@
+{% load humanize %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive</title>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/final.css' %}">
+    <!--
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <script src="js/lib/es5-shim.min.js"></script>
+    -->
+</head>
+<body class="main">
+<header class="b-header">
+    <ul class="b-userdata b-userdata--first">
+        <li class="b-userdata__item b-userdata__item--name">
+            <div class="b-userdata__image">
+             <img alt="" id="image_avatar" class="img-thumbnail" src="{{ user.profile.get_avatar }}">
+            </div>
+            <div data-target="name" class="b-userdata__primary">
+            {{ user.get_full_name}}</div>
+            <div data-target="email" class="b-userdata__secondary">
+            {{user.email}}</div>
+            <div class="b-menu">
+                <ul class="b-data">
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="position" class="b-userdata__secondary"></div>
+            <div data-target="position" class="b-userdata__primary">
+            {{ user.profile.position}}</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="investment" class="b-userdata__secondary"></div>
+            <div data-target="investment" class="b-userdata__primary">
+            {{ user.profile.investment|intcomma}}  $</div>
+        </li>
+    </ul>
+    <ul class="b-userdata b-userdata b-userdata--second">
+        <li class="b-userdata__item">
+            <div data-lang="area" class="b-userdata__secondary"></div>
+            <div data-target="area" class="b-userdata__primary">
+            {{ user.profile.area|intcomma}}  га</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="company" class="b-userdata__secondary"></div>
+            <div data-target="company" class="b-userdata__primary">
+            {{ user.profile.company}}</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="holding" class="b-userdata__secondary"></div>
+            <div data-target="holding" class="b-userdata__primary">
+            {{ user.profile.holding}}</div>
+        </li>
+        <li class="b-userdata__item b-userdata__item--last">
+            <div data-lang="cluster" class="b-userdata__secondary"></div>
+            <div data-target="cluster" class="b-userdata__primary cluster">
+            {{ user.profile.cluster}}</div>
+        </li>
+    </ul>
+</header>
+<div class="b-subheader">
+    <ul class="b-data">
+        <li class="b-data__item">
+            <div data-lang="total" class="b-data__name">
+            </div>
+            <div data-target="total" class="b-data__value">
+            {{user.profile.total|intcomma}} $</div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="ebitda" class="b-data__name">
+            </div>
+            <div data-target="ebitda" class="b-data__value b-data__value--impact">
+            {{user.profile.ebitda|intcomma}} $</div>
+            <div class="b-data__impact">$ -2,153,197</div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="investmentRentability" class="b-data__name">
+            </div>
+            <div data-target="investmentRentability" class="b-data__value b-data__value--impact">
+            {{user.profile.investmentRentability}} %</div>
+            <div class="b-data__impact">29,7%</div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="profit" class="b-data__name">
+            </div>
+            <div data-target="profit" class="b-data__value b-data__value--impact b-data__value--green">
+            {{user.profile.get_profit|intcomma}} $</div>
+            <div class="b-data__impact">$ -1,946</div>
+        </li>
+    </ul>
+</div>
+<div class="i-container js-2">
+    <h2 data-lang="final" class="b-title"></h2>
+    <div class="b-holder">
+        <ul class="b-list">
+            <li class="b-list__item">
+                <div class="b-list__image b-list__image--wheat"></div>
+                <div class="b-list__name">Озима пшениця</div>
+                <div class="b-list__value">Ваша вiдповiдальнiсть 675 з 675 га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Втрати врожайностi</div>
+                <div class="b-list__value b-list__value--red">-0,28 т/га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Бонус команди механiзаторiв</div>
+                <div class="b-list__value b-list__value--red">-5,368 $</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Ваш прибуток у партнерськiй програмi</div>
+                <div class="b-list__value b-list__value--red">-1,696 $</div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder">
+        <ul class="b-list">
+            <li class="b-list__item">
+                <div class="b-list__image b-list__image--rape"></div>
+                <div class="b-list__name">Озимий рапс</div>
+                <div class="b-list__value">Ваша вiдповiдальнiсть 675 з 675 га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Втрати врожайностi</div>
+                <div class="b-list__value b-list__value--red">-0,28 т/га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Бонус команди механiзаторiв</div>
+                <div class="b-list__value b-list__value--red">-5,368 $</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Ваш прибуток у партнерськiй програмi</div>
+                <div class="b-list__value b-list__value--red">-1,696 $</div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder js-active">
+        <div class="b-subholder">
+            <ul class="b-list">
+                <li class="b-list__item">
+                    <div class="b-list__image b-list__image--soybean"></div>
+                    <div class="b-list__name">Соя</div>
+                    <div class="b-list__value">Ваша вiдповiдальнiсть 675 з 675 га</div>
+                </li>
+            </ul>
+            <ul class="b-list">
+                <li class="b-list__item b-list__item--middle">
+                    <div class="b-list__name">Втрати врожайностi</div>
+                    <div class="b-list__value b-list__value--red">-0,28 т/га</div>
+                </li>
+            </ul>
+            <ul class="b-list">
+                <li class="b-list__item b-list__item--middle">
+                    <div class="b-list__name">Бонус команди механiзаторiв</div>
+                    <div class="b-list__value b-list__value--red">-5,368 $</div>
+                </li>
+            </ul>
+            <ul class="b-list">
+                <li class="b-list__item b-list__item--middle">
+                    <div class="b-list__name">Ваш прибуток у партнерськiй програмi</div>
+                    <div class="b-list__value b-list__value--red">-1,696 $</div>
+                </li>
+            </ul>
+        </div>
+        <div class="b-subholder b-subholder--second">
+            <ul class="b-list b-list--grid">
+                <li class="b-list__item">
+                    Втрати врожайностi
+                </li>
+                <li class="b-list__item">
+                    Бонус команди механiзаторiв
+                </li>
+                <li class="b-list__item">
+                    Ваш прибуток у партнерськiй програмi
+                </li>
+            </ul>
+            <ul class="b-sublist">
+                <li class="b-sublist__item b-sublist__item--big">
+                    <h2 class="b-title">Посiв</h2>
+                    <ul class="b-sublist b-sublist--inner">
+                        <li class="b-sublist__name">Швидкiсть руху</li>
+                        <li class="b-sublist__value">-0,21 т/га</li>
+                        <li class="b-sublist__value">-4,040 $</li>
+                        <li class="b-sublist__value">-1,227 $</li>
+                    </ul>
+                    <ul class="b-sublist b-sublist--inner">
+                        <li class="b-sublist__name">Глибина посiву</li>
+                        <li class="b-sublist__value">-0,28 т/га</li>
+                        <li class="b-sublist__value">-5368 $</li>
+                        <li class="b-sublist__value">-1,596$</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="b-sublist">
+                <li class="b-sublist__item b-sublist__item--big">
+                    <h2 class="b-title">Оприскування</h2>
+                    <ul class="b-sublist  b-sublist--inner">
+                        <li class="b-sublist__name">Швидкiсть руху</li>
+                        <li class="b-sublist__value">-0,21 т/га</li>
+                        <li class="b-sublist__value">-4,040 $</li>
+                        <li class="b-sublist__value">-1,227 $</li>
+                    </ul>
+                    <ul class="b-sublist  b-sublist--inner">
+                        <li class="b-sublist__name">Висота штанги</li>
+                        <li class="b-sublist__value">-0,21 т/га</li>
+                        <li class="b-sublist__value">-4,040 $</li>
+                        <li class="b-sublist__value">-1,227 $</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="b-sublist">
+                <li class="b-sublist__item b-sublist__item--big">
+                    <h2 class="b-title">Обробка грунту</h2>
+                    <ul class="b-sublist  b-sublist--inner">
+                        <li class="b-sublist__name">Швидкiсть руху</li>
+                        <li class="b-sublist__value">-0,21 т/га</li>
+                        <li class="b-sublist__value">-4,040 $</li>
+                        <li class="b-sublist__value">-1,227 $</li>
+                    </ul>
+                    <ul class="b-sublist b-sublist--inner">
+                        <li class="b-sublist__name">Глибина обробки</li>
+                        <li class="b-sublist__value">-0,21 т/га</li>
+                        <li class="b-sublist__value">-4,040 $</li>
+                        <li class="b-sublist__value">-1,227 $</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-holder">
+        <ul class="b-list">
+            <li class="b-list__item">
+                <div class="b-list__image b-list__image--corn"></div>
+                <div class="b-list__name">Кукурудза</div>
+                <div class="b-list__value">Ваша вiдповiдальнiсть 675 з 675 га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Втрати врожайностi</div>
+                <div class="b-list__value b-list__value--red">-0,28 т/га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Бонус команди механiзаторiв</div>
+                <div class="b-list__value b-list__value--red">-5,368 $</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Ваш прибуток у партнерськiй програмi</div>
+                <div class="b-list__value b-list__value--red">-1,696 $</div>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder">
+        <ul class="b-list">
+            <li class="b-list__item">
+                <div class="b-list__image b-list__image--sunflower"></div>
+                <div class="b-list__name">Соняшник</div>
+                <div class="b-list__value">Ваша вiдповiдальнiсть 675 з 675 га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Втрати врожайностi</div>
+                <div class="b-list__value b-list__value--red">-0,28 т/га</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Бонус команди механiзаторiв</div>
+                <div class="b-list__value b-list__value--red">-5,368 $</div>
+            </li>
+        </ul>
+        <ul class="b-list">
+            <li class="b-list__item b-list__item--middle">
+                <div class="b-list__name">Ваш прибуток у партнерськiй програмi</div>
+                <div class="b-list__value b-list__value--red">-1,696 $</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'landing/js/lang.js'%}"></script>
+<script src="{% static 'landing/js/lib/material.min.js'%}"></script>
+<script src="{% static 'landing/js/test.js' %}"></script>
+<
+</body>
+</html>

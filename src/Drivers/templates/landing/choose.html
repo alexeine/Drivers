@@ -1,0 +1,208 @@
+{% load humanize %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive</title>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/choose.css'%}">
+    <!--
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <script src="js/lib/es5-shim.min.js"></script>
+    -->
+</head>
+<body class="main">
+<header class="b-header">
+    <ul class="b-userdata b-userdata--first">
+        <li class="b-userdata__item b-userdata__item--name">
+            <div class="b-userdata__image">
+             <img alt="" id="image_avatar" class="img-thumbnail" src="{{ user.profile.get_avatar }}">
+            </div>
+            <div data-target="name" class="b-userdata__primary">
+            {{ user.get_full_name}}</div>
+            <div data-target="email" class="b-userdata__secondary">
+            {{user.email}}</div>
+            <div class="b-menu">
+                <ul class="b-data">
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                    <li class="b-data__item">
+                        <div class="b-data__image"></div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="position" class="b-userdata__secondary"></div>
+            <div data-target="position" class="b-userdata__primary">
+            {{ user.profile.position}}</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="investment" class="b-userdata__secondary"></div>
+            <div data-target="investment" class="b-userdata__primary">
+            {{ user.profile.investment|intcomma}}  $</div>
+        </li>
+    </ul>
+    <ul class="b-userdata b-userdata b-userdata--second">
+        <li class="b-userdata__item">
+            <div data-lang="area" class="b-userdata__secondary"></div>
+            <div data-target="area" class="b-userdata__primary">
+            {{ user.profile.area|intcomma}}  га</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="company" class="b-userdata__secondary"></div>
+            <div data-target="company" class="b-userdata__primary">
+            {{ user.profile.company}}</div>
+        </li>
+        <li class="b-userdata__item">
+            <div data-lang="holding" class="b-userdata__secondary"></div>
+            <div data-target="holding" class="b-userdata__primary">
+            {{ user.profile.holding}}</div>
+        </li>
+        <li class="b-userdata__item b-userdata__item--last">
+            <div data-lang="cluster" class="b-userdata__secondary"></div>
+            <div data-target="cluster" class="b-userdata__primary cluster">
+            {{ user.profile.cluster}}</div>
+        </li>
+    </ul>
+</header>
+<div class="i-container">
+    <div class="b-holder">
+        <ul class="b-data">
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--wheat"></div>
+                <div data-target="plant1" class="b-data__name">
+                    Озима пшениця
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--rapeseed"></div>
+                <div data-target="plant2" class="b-data__name">
+                    Озимий рапс
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--soybean"></div>
+                <div data-target="plant3" class="b-data__name">
+                    Соя
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--corn"></div>
+                <div data-target="plant4" class="b-data__name">
+                    Кукурудза
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+            <li class="b-data__item b-data__item--plant">
+                <div class="b-data__image b-data__image--sunflower"></div>
+                <div data-target="plant5" class="b-data__name">
+                    Соняшник
+                </div>
+                <div data-target="plantValue" class="b-data__total"></div>
+            </li>
+        </ul>
+        <div class="b-list">
+            <div data-lang="tillage" class="b-title"></div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="wheatTillage">
+                    <input type="checkbox" id="wheatTillage" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="rapeTillage">
+                    <input type="checkbox" id="rapeTillage" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="soybeanTillage">
+                    <input type="checkbox" id="soybeanTillage" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cornTillage">
+                    <input type="checkbox" id="cornTillage" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="sunflowerTillage">
+                    <input type="checkbox" id="sunflowerTillage" class="mdl-checkbox__input">
+                </label>
+            </div>
+        </div>
+        <div class="b-list">
+            <div data-lang="seeding" class="b-title"></div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="wheatSeeding">
+                    <input type="checkbox" id="wheatSeeding" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="rapeSeeding">
+                    <input type="checkbox" id="rapeSeeding" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="soybeanSeeding">
+                    <input type="checkbox" id="soybeanSeeding" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cornSeeding">
+                    <input type="checkbox" id="cornSeeding" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="sunflowerSeeding">
+                    <input type="checkbox" id="sunflowerSeeding" class="mdl-checkbox__input">
+                </label>
+            </div>
+        </div>
+        <div class="b-list">
+            <div data-lang="spraying" class="b-title"></div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="wheatSpraying">
+                    <input type="checkbox" id="wheatSpraying" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="rapeSpraying">
+                    <input type="checkbox" id="rapeSpraying" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="soybeanSpraying">
+                    <input type="checkbox" id="soybeanSpraying" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="cornSpraying">
+                    <input type="checkbox" id="cornSpraying" class="mdl-checkbox__input">
+                </label>
+            </div>
+            <div class="b-list__item">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="sunflowerSpraying">
+                    <input type="checkbox" id="sunflowerSpraying" class="mdl-checkbox__input">
+                </label>
+            </div>
+        </div>
+    </div>
+    <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button js-start" href="action">
+    </a>
+</div>
+<script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'landing/js/lang.js'%}"></script>
+<script src="{% static 'landing/js/lib/material.min.js'%}"></script>
+<script src="{% static 'landing/js/getData.js'%}"></script>
+</body>
+</html>

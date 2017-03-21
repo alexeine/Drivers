@@ -4,8 +4,8 @@ from django.contrib.auth import authenticate, login
 from django.views.generic import TemplateView, DetailView
 
 
-class StartPageView(TemplateView):
-	template_name = 'landing/start.html'
+class Choose(TemplateView):
+	template_name = 'landing/choose.html'
 
 
 class Main(TemplateView):
@@ -14,3 +14,9 @@ class Main(TemplateView):
 
 class Action(TemplateView):
 	template_name = 'landing/action.html'
+
+class Final(TemplateView):
+	template_name = 'landing/final.html'
+
+class Result(TemplateView):
+	template_name = 'landing/result.html'

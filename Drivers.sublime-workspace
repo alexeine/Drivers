@@ -203,25 +203,16 @@
 			"file": "src/Drivers/templates/landing/preset.html",
 			"settings":
 			{
-				"buffer_size": 14975,
+				"buffer_size": 15304,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Drivers/templates/landing/action.html",
+			"file": "/home/brutal/Завантаження/preset.html",
 			"settings":
 			{
-				"buffer_size": 28587,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Drivers/templates/landing/start.html",
-			"settings":
-			{
-				"buffer_size": 2299,
+				"buffer_size": 14572,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -266,25 +257,33 @@
 		"/home/brutal/Drivers",
 		"/home/brutal/Drivers/src",
 		"/home/brutal/Drivers/src/Drivers",
-		"/home/brutal/Drivers/src/Drivers/templates",
-		"/home/brutal/Drivers/src/Drivers/templates/landing"
+		"/home/brutal/Drivers/src/Drivers/static/landing",
+		"/home/brutal/Drivers/src/Drivers/static/landing/js",
+		"/home/brutal/Drivers/src/Drivers/templates/landing",
+		"/home/brutal/Drivers/src/Drivers/templates/registration"
 	],
 	"file_history":
 	[
-		"/home/brutal/Drivers/src/Drivers/landing/views.py",
-		"/home/brutal/Drivers/src/Drivers/landing/urls.py",
+		"/home/brutal/Drivers/src/Drivers/static/landing/js/getData.js",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/login.html",
+		"/home/brutal/Завантаження/login.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/action.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/preset.html",
+		"/home/brutal/Drivers/requirements.txt",
+		"/home/brutal/Drivers/.gitignore",
+		"/home/brutal/Завантаження/action.html",
+		"/home/brutal/Завантаження/preset.html",
+		"/home/brutal/Drivers/src/Drivers/landing/urls.py",
 		"/home/brutal/Drivers/src/Drivers/static/landing/js/lang.js",
+		"/home/brutal/Drivers/src/accounts/models.py",
+		"/home/brutal/Drivers/src/Drivers/landing/views.py",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/main.html",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/start.html",
 		"/home/brutal/Завантаження/start.html",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/start2.html",
-		"/home/brutal/Drivers/src/Drivers/templates/landing/preset.html",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_form.html",
-		"/home/brutal/Завантаження/preset.html",
 		"/home/brutal/Drivers/src/Drivers/registration/views.py",
 		"/home/brutal/Drivers/src/Drivers/registration/models.py",
-		"/home/brutal/Drivers/src/accounts/models.py",
 		"/home/brutal/Drivers/src/Drivers/settings.py",
 		"/home/brutal/Drivers/src/Drivers/registration/forms.py",
 		"/home/brutal/Drivers/src/Drivers/urls.py",
@@ -297,7 +296,6 @@
 		"/home/brutal/Drivers/src/accounts/admin.py",
 		"/home/brutal/Drivers/src/Drivers/accounts/models.py",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/main1.html",
-		"/home/brutal/Drivers/src/Drivers/static/landing/js/getData.js",
 		"/home/brutal/Drivers/src/accounts/views.py",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/login.html",
 		"/home/brutal/Drivers/src/Drivers/static/landing/js/main.js",
@@ -393,12 +391,7 @@
 		"/home/brutal/ingress_site/ingress/manage.py",
 		"/home/brutal/ingress_site/ingress/templates/search_form.html",
 		"/home/brutal/ingress_site/ingress/ingress/views.py",
-		"/home/brutal/ingress_site/ingress/templates/base.html",
-		"/home/brutal/ingress_site/ingress/templates/current_datetime.html",
-		"/home/brutal/ingress_site/ingress/templates/hours_ahead.html",
-		"/home/brutal/Робочий стіл/Неназвана тека/palind.py",
-		"/home/brutal/djan/mysite/mysite/settings.py",
-		"/home/brutal/ingress_site/ingress/views.py"
+		"/home/brutal/ingress_site/ingress/templates/base.html"
 	],
 	"find":
 	{
@@ -487,7 +480,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -496,15 +489,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14975,
+						"buffer_size": 15304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14708,
-								14708
+								15271,
+								15271
 							]
 						],
 						"settings":
@@ -514,57 +507,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/Drivers/templates/landing/action.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28587,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28571,
-								28571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7860.0,
+						"translation.y": 4410.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/Drivers/templates/landing/start.html",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "/home/brutal/Завантаження/preset.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2299,
+						"buffer_size": 14572,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2283,
-								2283
+								14388,
+								14388
 							]
 						],
 						"settings":
@@ -574,10 +537,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 616.0,
+						"translation.y": 4326.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

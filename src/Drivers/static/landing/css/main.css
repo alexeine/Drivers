@@ -323,6 +323,19 @@ body.main {
     transform: translateY(-50%);
     width: 50%;
 }
+.b-data__value--impact {
+    vertical-align: top;
+    margin-top: 15px;
+    line-height: 1;
+}
+.b-data__impact {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    color: #d15757;
+    line-height: 1;
+    font-size: 16px;
+}
 @media all and (max-width: 1280px) {
     .b-data__item {
         height: 77px;
@@ -756,7 +769,7 @@ body.main {
     background: #009688;
 }
 .mdl-slider {
-    margin: 0 13px;
+    margin: 0 14px;
 }
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
     border: 2px solid #757575;

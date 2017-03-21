@@ -1,5 +1,12 @@
+/* action page */
+
+.main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
 .i-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: calc(100vh - 140px);
     padding: 30px 30px 90px 30px;
@@ -21,11 +28,13 @@
 .b-data__item {
     padding: 0;
     font-size: 0;
+    height: 70px;
 }
 .b-data__name {
     display: inline-block;
     line-height: 70px;
     font-size: 16px;
+    margin-top: 0;
 }
 .b-data__value {
     position: relative;
@@ -33,7 +42,6 @@
     right: auto;
     display: inline-block;
     margin-left: 16px;
-    line-height: 70px;
     font-size: 18px;
 }
 .b-params {
@@ -44,6 +52,7 @@
 }
 .b-params__item {
     margin-bottom: 60px;
+    overflow: hidden;
 }
 .b-params__name {
     display: inline-block;
@@ -67,6 +76,8 @@
     right: auto;
     transform: none;
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .b-fake {
     position: absolute;
@@ -78,13 +89,33 @@
     background: #bebebe;
     z-index: 10;
 }
-.b-fake--overlay {
+.b-fake__overlay {
     position: absolute;
     top: 0;
     height: 2px;
     width: 0;
     left: 0;
     background: #009688;
+    transition: width .7s ease;
+}
+
+.b-months {
+    display: grid;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: space-between;
+}
+.b-months__item {
+    font-size: 0.8em;
+    color: #b0b0b0;
+}
+.b-months__item--last {
+    text-align: right;
 }
 .b-point {
     position: absolute;
@@ -94,20 +125,17 @@
     width: 7px;
     border-radius: 50%;
     background: #b0b0b0;
-    display: none;
     z-index: 50;
+    display: none;
 }
+/* classes added with js */
 .js-done {
     background: #009688;
 }
 .js-current {
     left: 0;
     z-index: 100;
-    transition: left 0.5s ease;
-}
-.js-prev {
-    left: -100%;
-    transition: left 0.5s ease;
+    transition: left 0.3s ease;
 }
 .js-next {
     left: 100%;
@@ -115,11 +143,12 @@
 .js-hidden {
     display: none;
 }
+/* customize for material design elements */
 .mdl-slider {
     margin: 0 0 0 1px;
 }
 .mdl-slider__background-flex {
-    margin: 0 13px;
+    margin: 0 25px;
 }
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
     font-size: 1.1em;
@@ -127,3 +156,138 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.mdl-slider.is-upgraded::-webkit-slider-thumb{
+    background: #009688;
+    height: 30px;
+    width: 30px;
+}
+.mdl-slider.is-upgraded::-moz-range-thumb{
+    background: #009688;
+    height: 30px;
+    width: 30px;
+}
+.mdl-slider.is-upgraded.is-lowest-value:active+.mdl-slider__background-flex>.mdl-slider__background-upper {
+    left: 7px;
+}
+.mdl-slider {
+    width: 100%;
+}
+/* end of action page */
+
+/* result page */
+.i-container--result {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.b-subtitle {
+    position: relative;
+    color: #b5b5b5;
+    font-size: 1.2em;
+    line-height: 1;
+    margin-top: 12px;
+}
+.b-params__value--red {
+    color: #d15757;
+}
+.b-params__value--yellow {
+    color: #d9b439;
+}
+.i-container--result .b-params__item {
+    overflow: hidden;
+}
+.b-line {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    margin-top: 16px;
+    background: #bdbdbd;
+}
+.b-line__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: #009688;
+    z-index: 10;
+}
+.b-line__point {
+    position: absolute;
+    top: 0;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: #000;
+    z-index: 30;
+}
+.b-line__point--first {
+    left: 0;
+}
+.b-line__point--second {
+    left: calc(20% - 4px);
+}
+.b-line__point--third {
+    left: calc(40% - 4px);
+}
+.b-line__point--fourth {
+    left: calc(60% - 4px);
+}
+.b-line__point--fifth {
+    left: calc(80% - 4px);
+}
+.b-line__point--sixth {
+    left: auto;
+    right: 0;
+}
+.b-impact {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 5px 0 0 0;
+    overflow: hidden;
+}
+.b-impact__item {
+    position: relative;
+    margin-top: 5px;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+.b-impact__text {
+    color: #b5b5b5;
+    font-size: 0.9em;
+    line-height: 1;
+}
+.b-impact__value {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.9em;
+    color: #d15757;
+}
+ .b-total {
+     position: absolute;
+     left: 16px;
+     bottom: 16px;
+     display: block;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+ .b-total__item {
+     margin-top: 20px;
+ }
+ .b-total__text {
+     font-size: 1em;
+     line-height: 1;
+     color: #000;
+ }
+ .b-total__result {
+     font-size: 0.7em;
+     line-height: 1;
+     color: #d15757;
+ }
+/* customize for material design elements */
+.i-container--result .mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    width: 100%;
+    bottom: 0;
+}
+/* end of result page */

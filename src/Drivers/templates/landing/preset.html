@@ -1,4 +1,4 @@
-
+{% load humanize %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -41,14 +41,14 @@
         <li class="b-userdata__item">
             <div data-lang="investment" class="b-userdata__secondary"></div>
             <div data-target="investment" class="b-userdata__primary">
-            {{ user.profile.investment}}  $</div>
+            {{ user.profile.investment|intcomma}}  $</div>
         </li>
     </ul>
     <ul class="b-userdata b-userdata b-userdata--second">
         <li class="b-userdata__item">
             <div data-lang="area" class="b-userdata__secondary"></div>
             <div data-target="area" class="b-userdata__primary">
-            {{ user.profile.area}}  га</div>
+            {{ user.profile.area|intcomma}}  га</div>
         </li>
         <li class="b-userdata__item">
             <div data-lang="company" class="b-userdata__secondary"></div>
@@ -77,7 +77,7 @@
                 <div data-lang="totalInfo" class="b-data__text">
                 </div>
                 <div data-target="total" class="b-data__value">
-                {{ user.profile.total}}  $</div>
+                {{ user.profile.total|intcomma}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -86,7 +86,7 @@
                 <div data-lang="ebitdaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                {{ user.profile.ebitda}}  $</div>
+                {{ user.profile.ebitda|intcomma}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -95,7 +95,7 @@
                 <div data-lang="ebitdaForHaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitdaForHa" class="b-data__value">
-                {{ request.user.profile.get_ebitda_per_area }}  $</div>
+                {{ request.user.profile.get_ebitda_per_area|intcomma }}  $</div>
             </li>
         </ul>
     </div>
@@ -108,7 +108,7 @@
                 <div data-lang="investmentInfo" class="b-data__text">
                 </div>
                 <div data-target="investment" class="b-data__value">
-                {{ user.profile.userInvestment}}  $</div>
+                {{ user.profile.userInvestment|intcomma}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -117,7 +117,7 @@
                 <div data-lang="teamInvestment1Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment1" class="b-data__value">
-                {{ user.profile.teamInvestment1}}  $</div>
+                {{ user.profile.teamInvestment1|intcomma}}  $</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -126,7 +126,7 @@
                 <div data-lang="teamInvestment2Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment2" class="b-data__value">
-                {{ user.profile.teamInvestment2}}  $</div>
+                {{ user.profile.teamInvestment2|intcomma}}  $</div>
             </li>
         </ul>
     </div>
@@ -157,7 +157,7 @@
                 <div data-lang="profitInfo" class="b-data__text">
                 </div>
                 <div data-target="profit" class="b-data__value b-data__value--green">
-                </div>
+                {{ request.user.profile.get_profit|intcomma }}  $</div>
             </li>
         </ul>
     </div>
@@ -220,8 +220,8 @@
                     Озима пшениця
                 </div>
                 <div class="b-data__input-holder">
-                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
-                           min="0" max="100" value="0" tabindex="0" step="5">
+                    <input class="mdl-slider mdl-js-slider preset-input" data-point="wheat" type="range"
+                           min="0" max="100" value="100" tabindex="0" step="5">
                 </div>
                 <div data-target="plantValue" class="b-data__total"></div>
             </li>
@@ -231,8 +231,8 @@
                     Озимий рапс
                 </div>
                 <div class="b-data__input-holder">
-                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
-                           min="0" max="100" value="0" tabindex="0" step="5">
+                    <input class="mdl-slider mdl-js-slider preset-input" data-point="rape" type="range"
+                           min="0" max="100" value="100" tabindex="0" step="5">
                 </div>
                 <div data-target="plantValue" class="b-data__total"></div>
             </li>
@@ -242,8 +242,8 @@
                     Соя
                 </div>
                 <div class="b-data__input-holder">
-                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
-                           min="0" max="100" value="0" tabindex="0" step="5">
+                    <input class="mdl-slider mdl-js-slider preset-input" data-point="soybean" type="range"
+                           min="0" max="100" value="100" tabindex="0" step="5">
                 </div>
                 <div data-target="plantValue" class="b-data__total"></div>
             </li>
@@ -253,8 +253,8 @@
                     Кукурудза
                 </div>
                 <div class="b-data__input-holder">
-                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
-                           min="0" max="100" value="0" tabindex="0" step="5">
+                    <input class="mdl-slider mdl-js-slider preset-input" data-point="corn" type="range"
+                           min="0" max="100" value="100" tabindex="0" step="5">
                 </div>
                 <div data-target="plantValue" class="b-data__total"></div>
             </li>
@@ -264,8 +264,8 @@
                     Соняшник
                 </div>
                 <div class="b-data__input-holder">
-                    <input class="mdl-slider mdl-js-slider preset-input" type="range"
-                           min="0" max="100" value="0" tabindex="0" step="5">
+                    <input class="mdl-slider mdl-js-slider preset-input" data-point="sunflower" type="range"
+                           min="0" max="100" value="100" tabindex="0" step="5">
                 </div>
                 <div data-target="plantValue" class="b-data__total"></div>
             </li>
@@ -306,7 +306,7 @@
                 </li>
             </ul>
         </div>
-        <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="action">
+        <a data-lang="start" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="choose">
         </a>
 
     </div>
@@ -317,5 +317,6 @@
 <script src="{% static 'landing/js/lib/material.min.js'%}"></script>
 <script src="{% static 'landing/js/lib/chart/Chart.js'%}"></script>
 <script src="{% static 'landing/js/main.js'%}"></script>
+<script src="{% static 'landing/js/getData.js'%}"></script>
 </body>
 </html>

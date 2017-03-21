@@ -1,0 +1,66 @@
+.i-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px 30px 115px 30px;
+}
+.b-holder {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr 1fr;
+    overflow: hidden;
+    padding-right: 200px;
+    padding-left: 30px;
+}
+.b-button {
+    bottom: 28px;
+    right: 30px;
+    left: auto;
+    width: 350px;
+}
+.b-data, .b-list {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    height: calc(100% - 80px);
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 80px;
+}
+.b-list {
+    position: relative;
+    overflow: visible;
+}
+.b-data__item, .b-data__item--plant {
+    height: auto;
+    margin: 0;
+    padding-right: 0;
+}
+.b-data__image {
+    top: 5px;
+}
+.b-list__item {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+}
+.b-title {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.b-data__name {
+    font-size: 1.3em;
+}
+.b-data__total {
+    font-size: 1.1em;
+}
+.mdl-checkbox__box-outline {
+    top: 9px;
+    width: 33px;
+    height: 33px;
+}
+.mdl-checkbox__ripple-container {
+    top: 0;
+    left: -3px;
+}

@@ -1,0 +1,1434 @@
+{% load humanize %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive</title>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/css/action.css' %}">
+    <!--
+    <script src="js/lib/html5shiv.js"></script>
+    <script src="js/lib/respond.min.js"></script>
+    <script src="js/lib/es5-shim.min.js"></script>
+    -->
+</head>
+<body class="main">
+<header class="b-header">
+        <ul class="b-userdata b-userdata--first">
+            <li class="b-userdata__item b-userdata__item--name">
+                <div class="b-userdata__image"><img alt="" id="image_avatar" class="img-thumbnail" src="{{ user.profile.get_avatar }}"></div>
+                <div data-target="name" class="b-userdata__primary">{{ user.get_full_name}}</div>
+                <div data-target="email" class="b-userdata__secondary">{{user.email}}</div>
+                <div class="b-menu">
+                    <ul class="b-data">
+                        <li class="b-data__item">
+                            <div class="b-data__image"></div>
+                        </li>
+                        <li class="b-data__item">
+                            <div class="b-data__image"></div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="b-userdata__item">
+                <div data-lang="position" class="b-userdata__secondary"></div>
+                <div data-target="position" class="b-userdata__primary">
+                {{ user.profile.position}}</div>
+            </li>
+            <li class="b-userdata__item">
+                <div data-lang="investment" class="b-userdata__secondary"></div>
+                <div data-target="investment" class="b-userdata__primary">
+                    {{ user.profile.investment|intcomma}}  $</div>
+            </li>
+        </ul>
+        <ul class="b-userdata b-userdata b-userdata--second">
+            <li class="b-userdata__item">
+                <div data-lang="area" class="b-userdata__secondary"></div>
+                <div data-target="area" class="b-userdata__primary">
+                    {{ user.profile.area|intcomma}}  га</div>
+            </li>
+            <li class="b-userdata__item">
+                <div data-lang="company" class="b-userdata__secondary"></div>
+                <div data-target="company" class="b-userdata__primary">
+                {{ user.profile.company}}</div>
+            </li>
+            <li class="b-userdata__item">
+                <div data-lang="holding" class="b-userdata__secondary"></div>
+                <div data-target="holding" class="b-userdata__primary">
+                {{ user.profile.holding}}</div>
+            </li>
+            <li class="b-userdata__item b-userdata__item--last">
+                <div data-lang="cluster" class="b-userdata__secondary"></div>
+                <div data-target="cluster" class="b-userdata__primary cluster">
+                {{ user.profile.cluster}}</div>
+            </li>
+        </ul>
+    </header>
+<div class="b-subheader">
+    <ul class="b-data">
+        <li class="b-data__item">
+            <div data-lang="total" class="b-data__name">
+            </div>
+            <div data-target="total" class="b-data__value">
+            </div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="ebitda" class="b-data__name">
+            </div>
+            <div data-target="ebitda" class="b-data__value b-data__value--impact">
+            </div>
+            <div class="b-data__impact">$ -2,153,197</div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="investmentRentability" class="b-data__name">
+            </div>
+            <div data-target="investmentRentability" class="b-data__value b-data__value--impact">
+            </div>
+            <div class="b-data__impact">29,7%</div>
+        </li>
+        <li class="b-data__item">
+            <div data-lang="profit" class="b-data__name">
+            </div>
+            <div data-target="profit" class="b-data__value b-data__value--impact b-data__value--green">
+            </div>
+            <div class="b-data__impact">$ -1,946</div>
+        </li>
+    </ul>
+</div>
+<div data-container="sunflowerTillage" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="sunflowerTillage" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValueChosen" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValueChosen" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="cornTillage" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="cornTillage" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="rapeTillage" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="rapeTillage" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="wheatTillage" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="wheatTillage" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="soybeanTillage" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="soybeanTillage" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="sunflowerSeeding" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="sunflowerSeeding" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="cornSeeding" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="cornSeeding" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="wheatSeeding" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="wheatSeeding" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="soybeanSeeding" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="soybeanSeeding" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="rapeSeeding" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="rapeSeeding" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="sunflowerSpraying" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="sunflowerSpraying" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="cornSpraying" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="cornSpraying" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="wheatSpraying" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="wheatSpraying" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="rapeSpraying" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="rapeSpraying" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div data-container="soybeanSpraying" class="i-container i-container--result">
+    <div class="b-holder">
+        <h2 data-lang="soybeanSpraying" class="b-title"></h2>
+        <h3 data-lang="errorAnalysis" class="b-subtitle"></h3>
+        <ul class="b-params">
+            <li class="b-params__item">
+                <div data-lang="movespeed" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--red">9</div>
+                <div data-lang="movespeedUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-params__item">
+                <div data-lang="depth" class="b-params__name"></div>
+                <div data-target="paramValue" class="b-params__value b-params__value--yellow">6</div>
+                <div data-lang="depthUnit" class="b-params__name"></div>
+                <div class="b-line">
+                    <div class="b-line__overlay"></div>
+                    <div class="b-line__point b-line__point--first"></div>
+                    <div class="b-line__point b-line__point--second"></div>
+                    <div class="b-line__point b-line__point--third"></div>
+                    <div class="b-line__point b-line__point--fourth"></div>
+                    <div class="b-line__point b-line__point--fifth"></div>
+                    <div class="b-line__point b-line__point--sixth"></div>
+                </div>
+                <ul class="b-impact">
+                    <li class="b-impact__item">
+                        <div data-lang="impactProductivity" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 0,21 т/га</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactBonuses" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 4,040 $</div>
+                    </li>
+                    <li class="b-impact__item">
+                        <div data-lang="impactProfit" class="b-impact__text"></div>
+                        <div class="b-impact__value">- 1,227 $</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="b-holder b-holder--image"></div>
+    <div class="b-holder b-holder--transparent">
+        <div class="b-holder__white">
+            <div data-lang="errorHistory" class="b-title"></div>
+            <ul class="b-total">
+                <li class="b-total__item">
+                    <div data-lang="totalText1" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,64 т/га, зниження вашого прибутку - 1,409$
+                    </div>
+                </li>
+                <li class="b-total__item">
+                    <div data-lang="totalText2" class="b-total__text"></div>
+                    <div class="b-total__result">
+                        Втрати врожайностi - 0,32 т/га, зниження вашого прибутку - 1,109$
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a data-lang="nextAction" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="final.html">
+        </a>
+    </div>
+</div>
+<div class="b-fake">
+    <div class="b-fake__overlay">
+    </div>
+    <div data-point="wheatTillage" class="b-point"></div>
+    <div data-point="rapeTillage" class="b-point"></div>
+    <div data-point="soybeanTillage" class="b-point"></div>
+    <div data-point="cornTillage" class="b-point"></div>
+    <div data-point="sunflowerTillage" class="b-point"></div>
+    <div data-point="wheatSeeding" class="b-point"></div>
+    <div data-point="rapeSeeding" class="b-point"></div>
+    <div data-point="soybeanSeeding" class="b-point"></div>
+    <div data-point="cornSeeding" class="b-point"></div>
+    <div data-point="sunflowerSeeding" class="b-point"></div>
+    <div data-point="wheatSpraying" class="b-point"></div>
+    <div data-point="rapeSpraying" class="b-point"></div>
+    <div data-point="soybeanSpraying" class="b-point"></div>
+    <div data-point="cornSpraying" class="b-point"></div>
+    <div data-point="sunflowerSpraying" class="b-point"></div>
+    <ul class="b-months">
+        <li data-lang="january" class="b-months__item"></li>
+        <li data-lang="february" class="b-months__item"></li>
+        <li data-lang="march" class="b-months__item"></li>
+        <li data-lang="april" class="b-months__item"></li>
+        <li data-lang="may" class="b-months__item"></li>
+        <li data-lang="june" class="b-months__item"></li>
+        <li data-lang="july" class="b-months__item"></li>
+        <li data-lang="august" class="b-months__item"></li>
+        <li data-lang="september" class="b-months__item"></li>
+        <li data-lang="october" class="b-months__item"></li>
+        <li data-lang="november" class="b-months__item"></li>
+        <li data-lang="december" class="b-months__item b-months__item--last"></li>
+    </ul>
+</div>
+
+<script src="{% static 'landing/js/lib/material.min.js'%}"></script>
+<script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'landing/js/lang.js'%}"></script>
+<script src="{% static 'landing/js/getData.js' %}"></script>
+<script src="{% static 'landing/js/fakeInput.js'%}"></script>
+
+</body>
+</html>

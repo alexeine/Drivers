@@ -85,6 +85,9 @@ class Profile(models.Model):
     def get_ebitda_per_area(self):
         return int(float(self.ebitda)/self.area)
 
+    def get_profit(self):
+        return int((self.investment*self.investmentRentability)/100)
+
 def my_unique_check(text, uids):
     if text in uids:
         return False

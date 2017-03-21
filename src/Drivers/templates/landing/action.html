@@ -1,10 +1,12 @@
 {% load static %}
+{% load humanize %}
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Drive</title>
     <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
@@ -41,14 +43,14 @@
             <li class="b-userdata__item">
                 <div data-lang="investment" class="b-userdata__secondary"></div>
                 <div data-target="investment" class="b-userdata__primary">
-                    {{ user.profile.investment}}  $</div>
+                    {{ user.profile.investment|intcomma}}  $</div>
             </li>
         </ul>
         <ul class="b-userdata b-userdata b-userdata--second">
             <li class="b-userdata__item">
                 <div data-lang="area" class="b-userdata__secondary"></div>
                 <div data-target="area" class="b-userdata__primary">
-                    {{ user.profile.area}}  га</div>
+                    {{ user.profile.area|intcomma}}  га</div>
             </li>
             <li class="b-userdata__item">
                 <div data-lang="company" class="b-userdata__secondary"></div>
@@ -73,19 +75,19 @@
                 <div data-lang="total" class="b-data__name">
                 </div>
                 <div data-target="total" class="b-data__value">
-                {{ user.profile.total}}  $</div>
+                </div>
             </li>
             <li class="b-data__item">
                 <div data-lang="ebitda" class="b-data__name">
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                {{ user.profile.ebitda}}  $</div>
+                </div>
             </li>
             <li class="b-data__item">
                 <div data-lang="investmentRentability" class="b-data__name">
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                {{ user.profile.investmentRentability}}  %</div>
+                </div>
             </li>
             <li class="b-data__item">
                 <div data-lang="profit" class="b-data__name">
@@ -97,7 +99,7 @@
     </div>
     <div data-container="sunflowerTillage" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Sunflower tillage</h2>
+            <h2 data-lang="sunflowerTillage" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -118,14 +120,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="cornTillage" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Corn tillage</h2>
+            <h2 data-lang="cornTillage" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -146,14 +148,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="rapeTillage" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Rape tillage</h2>
+            <h2 data-lang="rapeTillage" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -174,14 +176,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="wheatTillage" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Wheat tillage</h2>
+            <h2 data-lang="wheatTillage" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -202,14 +204,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html"data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="soybeanTillage" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Soybean tillage</h2>
+            <h2 data-lang="soybeanTillage" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -230,8 +232,8 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
@@ -258,14 +260,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="cornSeeding" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Corn seeding</h2>
+            <h2 data-lang="cornSeeding" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -286,14 +288,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="wheatSeeding" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Wheat seeding</h2>
+            <h2 data-lang="wheatSeeding" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -314,14 +316,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="soybeanSeeding" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Soybean seeding</h2>
+            <h2 data-lang="soybeanSeeding" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -342,14 +344,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="rapeSeeding" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Rape seeding</h2>
+            <h2 data-lang="rapeSeeding" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -370,14 +372,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="sunflowerSpraying" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Sunflower spraying</h2>
+            <h2 data-lang="sunflowerSpraying" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -398,14 +400,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="cornSpraying" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Corn spraying</h2>
+            <h2 data-lang="cornSpraying" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -426,14 +428,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="wheatSpraying" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Wheat spraying</h2>
+            <h2 data-lang="wheatSpraying" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -454,14 +456,14 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="rapeSpraying" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Rape spraying</h2>
+            <h2 data-lang="rapeSpraying" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -482,14 +484,15 @@
                     </div>
                 </li>
             </ul>
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            
+            <a href="result" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
     <div data-container="soybeanSpraying" class="i-container">
         <div class="b-holder">
-            <h2 data-lang="" class="b-title">Soybean spraying</h2>
+            <h2 data-lang="soybeanSpraying" class="b-title"></h2>
             <ul class="b-params">
                 <li class="b-params__item">
                     <div data-lang="movespeed" class="b-params__name"></div>
@@ -510,9 +513,8 @@
                     </div>
                 </li>
             </ul>
-
-            <div data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
-            </div>
+            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            </a>
         </div>
         <div class="b-holder b-holder--image"></div>
     </div>
@@ -534,13 +536,30 @@
         <div data-point="soybeanSpraying" class="b-point"></div>
         <div data-point="cornSpraying" class="b-point"></div>
         <div data-point="sunflowerSpraying" class="b-point"></div>
+        <ul class="b-months">
+            <li data-lang="january" class="b-months__item"></li>
+            <li data-lang="february" class="b-months__item"></li>
+            <li data-lang="march" class="b-months__item"></li>
+            <li data-lang="april" class="b-months__item"></li>
+            <li data-lang="may" class="b-months__item"></li>
+            <li data-lang="june" class="b-months__item"></li>
+            <li data-lang="july" class="b-months__item"></li>
+            <li data-lang="august" class="b-months__item"></li>
+            <li data-lang="september" class="b-months__item"></li>
+            <li data-lang="october" class="b-months__item"></li>
+            <li data-lang="november" class="b-months__item"></li>
+            <li data-lang="december" class="b-months__item b-months__item--last"></li>
+        </ul>
     </div>
 
 
+
 <script src="{% static 'landing/js/lib/jquery.min.js' %}"></script>
-<script src="{% static 'landing/js/lib/material.min.js' %}"></script>
-<script src="{% static 'landing/js/validate.js' %}"></script>
-<script src="{% static 'landing/js/starting.js' %}"></script>
 <script src="{% static 'landing/js/lang.js' %}"></script>
+<script src="{% static 'landing/js/fakeInput.js' %}"></script>
+<script src="{% static 'landing/js/getData.js' %}"></script>
+<script src="{% static 'landing/js/lib/material.min.js' %}"></script>
+
+
 </body>
 </html>
