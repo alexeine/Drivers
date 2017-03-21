@@ -43,7 +43,7 @@
             <li class="b-userdata__item">
                 <div data-lang="investment" class="b-userdata__secondary"></div>
                 <div data-target="investment" class="b-userdata__primary">
-                    {{ user.profile.investment|intcomma}}  $</div>
+                   $ {{ user.profile.investment|intcomma}}</div>
             </li>
         </ul>
         <ul class="b-userdata b-userdata b-userdata--second">
@@ -75,25 +75,25 @@
                 <div data-lang="total" class="b-data__name">
                 </div>
                 <div data-target="total" class="b-data__value">
-                </div>
+                $ {{ user.profile.total|intcomma}}</div>
             </li>
             <li class="b-data__item">
                 <div data-lang="ebitda" class="b-data__name">
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                </div>
+                $ {{ user.profile.ebitda|intcomma}}</div>
             </li>
             <li class="b-data__item">
                 <div data-lang="investmentRentability" class="b-data__name">
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                </div>
+                {{ user.profile.investmentRentability|intcomma}} %</div>
             </li>
             <li class="b-data__item">
                 <div data-lang="profit" class="b-data__name">
                 </div>
                 <div data-target="profit" class="b-data__value b-data__value--green">
-                </div>
+                $ {{ user.profile.get_profit|intcomma}}</div>
             </li>
         </ul>
     </div>
@@ -120,7 +120,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -148,7 +148,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -176,7 +176,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -204,7 +204,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html"data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -232,7 +232,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -288,7 +288,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -316,7 +316,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="result" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -344,7 +344,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button" href="{% url 'auth_login' %}" >
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -372,7 +372,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -400,7 +400,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -428,7 +428,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -456,7 +456,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>
@@ -513,7 +513,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="result.html" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
+            <a href="{% url 'landing:result' %}" data-lang="perform" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent b-button">
             </a>
         </div>
         <div class="b-holder b-holder--image"></div>

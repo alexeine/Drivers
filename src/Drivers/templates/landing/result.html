@@ -43,7 +43,7 @@
             <li class="b-userdata__item">
                 <div data-lang="investment" class="b-userdata__secondary"></div>
                 <div data-target="investment" class="b-userdata__primary">
-                    {{ user.profile.investment|intcomma}}  $</div>
+                   $  {{ user.profile.investment|intcomma}}</div>
             </li>
         </ul>
         <ul class="b-userdata b-userdata b-userdata--second">
@@ -75,27 +75,27 @@
             <div data-lang="total" class="b-data__name">
             </div>
             <div data-target="total" class="b-data__value">
-            </div>
+            $ {{ user.profile.total|intcomma}}</div>
         </li>
         <li class="b-data__item">
             <div data-lang="ebitda" class="b-data__name">
             </div>
             <div data-target="ebitda" class="b-data__value b-data__value--impact">
-            </div>
+            $ {{ user.profile.ebitda|intcomma}}</div>
             <div class="b-data__impact">$ -2,153,197</div>
         </li>
         <li class="b-data__item">
             <div data-lang="investmentRentability" class="b-data__name">
             </div>
             <div data-target="investmentRentability" class="b-data__value b-data__value--impact">
-            </div>
+            {{ user.profile.investmentRentability}} %</div>
             <div class="b-data__impact">29,7%</div>
         </li>
         <li class="b-data__item">
             <div data-lang="profit" class="b-data__name">
             </div>
             <div data-target="profit" class="b-data__value b-data__value--impact b-data__value--green">
-            </div>
+            $ {{ user.profile.get_profit}}</div>
             <div class="b-data__impact">$ -1,946</div>
         </li>
     </ul>

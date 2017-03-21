@@ -41,7 +41,7 @@
         <li class="b-userdata__item">
             <div data-lang="investment" class="b-userdata__secondary"></div>
             <div data-target="investment" class="b-userdata__primary">
-            {{ user.profile.investment|intcomma}}  $</div>
+             $ {{ user.profile.investment|intcomma}}</div>
         </li>
     </ul>
     <ul class="b-userdata b-userdata b-userdata--second">
@@ -77,7 +77,7 @@
                 <div data-lang="totalInfo" class="b-data__text">
                 </div>
                 <div data-target="total" class="b-data__value">
-                {{ user.profile.total|intcomma}}  $</div>
+                 $ {{ user.profile.total|intcomma}}</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -86,7 +86,7 @@
                 <div data-lang="ebitdaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitda" class="b-data__value">
-                {{ user.profile.ebitda|intcomma}}  $</div>
+                 $ {{ user.profile.ebitda|intcomma}}</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -95,7 +95,7 @@
                 <div data-lang="ebitdaForHaInfo" class="b-data__text">
                 </div>
                 <div data-target="ebitdaForHa" class="b-data__value">
-                {{ request.user.profile.get_ebitda_per_area|intcomma }}  $</div>
+                 $ {{ request.user.profile.get_ebitda_per_area|intcomma }}</div>
             </li>
         </ul>
     </div>
@@ -108,7 +108,7 @@
                 <div data-lang="investmentInfo" class="b-data__text">
                 </div>
                 <div data-target="investment" class="b-data__value">
-                {{ user.profile.userInvestment|intcomma}}  $</div>
+                 $ {{ user.profile.userInvestment|intcomma}} </div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -117,7 +117,7 @@
                 <div data-lang="teamInvestment1Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment1" class="b-data__value">
-                {{ user.profile.teamInvestment1|intcomma}}  $</div>
+                 $ {{ user.profile.teamInvestment1|intcomma}} </div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -126,7 +126,7 @@
                 <div data-lang="teamInvestment2Info" class="b-data__text">
                 </div>
                 <div data-target="teamInvestment2" class="b-data__value">
-                {{ user.profile.teamInvestment2|intcomma}}  $</div>
+                 $ {{ user.profile.teamInvestment2|intcomma}}</div>
             </li>
         </ul>
     </div>
@@ -157,7 +157,7 @@
                 <div data-lang="profitInfo" class="b-data__text">
                 </div>
                 <div data-target="profit" class="b-data__value b-data__value--green">
-                {{ request.user.profile.get_profit|intcomma }}  $</div>
+                $ {{ request.user.profile.get_profit|intcomma }}</div>
             </li>
         </ul>
     </div>
