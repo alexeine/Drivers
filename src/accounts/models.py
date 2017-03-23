@@ -51,14 +51,12 @@ class Profile(models.Model):
     cluster = models.CharField(max_length=5)
     total = models.IntegerField()
     ebitda = models.IntegerField()
-    userInvestment = models.IntegerField()
     passw = models.CharField(max_length=20, default="")
 
     companyWeight = models.IntegerField(default=5)
     teamInvestment1 = models.IntegerField()
     teamInvestment2 = models.IntegerField()
-    rentability = models.FloatField()
-    investmentRentability = models.FloatField()
+    
     
 
     slug = models.SlugField(unique=True, max_length=100)
@@ -87,6 +85,24 @@ class Profile(models.Model):
 
     def get_profit(self):
         return int((self.investment*self.investmentRentability)/100)
+
+    def get_rentability(self):
+        
+        rent=round((self.ebitda/self.total)*100,1)
+        return rent
+    
+    def get_investment_rentability(self):
+        
+        rent=(self.ebitda/self.total)
+
+        if rent>=0.2:
+            return round((rent-0.2)*2*100,1)
+        elif rent>=0.1 and rent<0.2:
+            return 0
+        else:
+            return round((-(0.1-rent)/1.1)*100 ,1)
+        
+
 
 def my_unique_check(text, uids):
     if text in uids:

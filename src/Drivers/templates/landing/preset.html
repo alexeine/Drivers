@@ -108,7 +108,7 @@
                 <div data-lang="investmentInfo" class="b-data__text">
                 </div>
                 <div data-target="investment" class="b-data__value">
-                 $ {{ user.profile.userInvestment|intcomma}} </div>
+                 $ {{ user.profile.investment|intcomma}}</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -139,7 +139,7 @@
                 <div data-lang="rentabilityInfo" class="b-data__text">
                 </div>
                 <div data-target="rentability" class="b-data__value">
-                {{ user.profile.rentability}}  %</div>
+                {{ request.user.profile.get_rentability|intcomma}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>
@@ -148,7 +148,7 @@
                 <div data-lang="investmentRentabilityInfo" class="b-data__text">
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                {{ user.profile.investmentRentability}}  %</div>
+                {{ request.user.profile.get_investment_rentability}}  %</div>
             </li>
             <li class="b-data__item">
                 <div class="b-data__image"></div>

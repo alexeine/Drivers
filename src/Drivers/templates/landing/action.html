@@ -87,7 +87,7 @@
                 <div data-lang="investmentRentability" class="b-data__name">
                 </div>
                 <div data-target="investmentRentability" class="b-data__value">
-                {{ user.profile.investmentRentability|intcomma}} %</div>
+                {{ request.user.profile.get_investment_rentability}} %</div>
             </li>
             <li class="b-data__item">
                 <div data-lang="profit" class="b-data__name">
