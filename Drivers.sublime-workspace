@@ -1,0 +1,618 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inv",
+				"invRent"
+			],
+			[
+				"to",
+				"total"
+			],
+			[
+				"as",
+				"as_view"
+			],
+			[
+				"inve",
+				"investmentRentability"
+			],
+			[
+				"re",
+				"rentability"
+			],
+			[
+				"in",
+				"investment"
+			],
+			[
+				"__",
+				"__call__"
+			],
+			[
+				"ima",
+				"image_thumb"
+			],
+			[
+				"Em",
+				"EMAIL_HOST_PASSWORD"
+			],
+			[
+				"Ema",
+				"EMAIL_HOST_USER"
+			],
+			[
+				"Email",
+				"EMAIL_HOST"
+			],
+			[
+				"STA",
+				"STATICFILES_DIRS"
+			],
+			[
+				"Ba",
+				"BASE_DIR"
+			],
+			[
+				"E",
+				"EMAIL_USE_SSL"
+			],
+			[
+				"BA",
+				"BASE_DIR"
+			],
+			[
+				"T",
+				"TEMPLATES"
+			],
+			[
+				"u",
+				"urls"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"b",
+				"backends"
+			],
+			[
+				"m",
+				"models"
+			],
+			[
+				"sy",
+				"synced_folder"
+			],
+			[
+				"provisi",
+				"provision"
+			],
+			[
+				"data",
+				"database_list"
+			],
+			[
+				"A",
+				"APP_KEY"
+			],
+			[
+				"APP",
+				"APP_SECRET"
+			],
+			[
+				"acess",
+				"acess_token"
+			],
+			[
+				"Po",
+				"PostModelAdmin"
+			],
+			[
+				"con",
+				"contact"
+			],
+			[
+				"Ht",
+				"HttpResponseRedirect"
+			],
+			[
+				"Book",
+				"BookAdmin"
+			],
+			[
+				"Au",
+				"AuthorAdmin"
+			],
+			[
+				"Cr",
+				"CharField"
+			],
+			[
+				"hours",
+				"hours_offset"
+			],
+			[
+				"hour",
+				"hours_ahead"
+			],
+			[
+				"curr",
+				"current_date"
+			],
+			[
+				"Htt",
+				"HttpResponse"
+			],
+			[
+				"ur",
+				"urlpatterns"
+			],
+			[
+				"mk_sol",
+				"mk_solver_poisson"
+			],
+			[
+				"y_",
+				"y_2"
+			],
+			[
+				"y",
+				"y_anal"
+			],
+			[
+				"set",
+				"setGeometry"
+			],
+			[
+				"st",
+				"start"
+			],
+			[
+				"matr",
+				"matrixRange"
+			],
+			[
+				"inp",
+				"inputMatrix"
+			],
+			[
+				"result",
+				"result1"
+			],
+			[
+				"res",
+				"result1"
+			],
+			[
+				"count",
+				"count1"
+			],
+			[
+				"coun",
+				"count_holes"
+			],
+			[
+				"fro",
+				"from_user"
+			],
+			[
+				"ch",
+				"chatid"
+			],
+			[
+				"cifar",
+				"cifar_dir"
+			],
+			[
+				"test",
+				"test_x_norm"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Drivers/settings.py",
+			"settings":
+			{
+				"buffer_size": 4029,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 337.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"View: Toggle Menu"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/brutal/Drivers"
+	],
+	"file_history":
+	[
+		"/home/brutal/Drivers/Drivers/accounts/__init__.py",
+		"/home/brutal/Завантаження/action_modified.html",
+		"/home/brutal/Drivers/requirements.txt",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/action.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/final.html",
+		"/home/brutal/Завантаження/final.html",
+		"/home/brutal/Drivers/src/Drivers/static/manifest.json",
+		"/home/brutal/Завантаження/action.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/preset.html",
+		"/home/brutal/Завантаження/preset.html",
+		"/home/brutal/Завантаження/start.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_form.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/login.html",
+		"/home/brutal/Завантаження/login.html",
+		"/home/brutal/Drivers/src/accounts/admin.py",
+		"/home/brutal/backup/dump.py",
+		"/home/brutal/dump-postgresql-and-save-into-dropbox/const.cfg",
+		"/home/brutal/backup/const.cfg",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/start.css",
+		"/home/brutal/Drivers/src/accounts/models.py",
+		"/home/brutal/Drivers/src/Drivers/registration/forms.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/result.html",
+		"/home/brutal/Drivers/src/Drivers/registration/backends/default/urls.py",
+		"/home/brutal/Drivers/src/Drivers/settings.py",
+		"/home/brutal/Drivers/src/Drivers/registration/backends/default/views.py",
+		"/home/brutal/Drivers/src/Drivers/registration/models.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/choose.html",
+		"/home/brutal/Drivers/src/Drivers/landing/urls.py",
+		"/home/brutal/Drivers/src/manage.py",
+		"/home/brutal/Завантаження/choose.html",
+		"/home/brutal/Drivers/src/Drivers/registration/auth_urls.py",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/action.css",
+		"/home/brutal/Завантаження/action (1).html",
+		"/home/brutal/Drivers/src/Drivers/landing/views.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/action1.html",
+		"/home/brutal/Drivers/src/Drivers/static/landing/js/getData.js",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/main.css",
+		"/home/brutal/Drivers/src/Drivers/static/locale/en.json",
+		"/home/brutal/Drivers/.gitignore",
+		"/home/brutal/Drivers/src/Drivers/static/landing/js/lang.js",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/main.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/start.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/start2.html",
+		"/home/brutal/Drivers/src/Drivers/registration/views.py",
+		"/home/brutal/Drivers/src/Drivers/urls.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/main12.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_email.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_subject.txt",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_email_subject.txt",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/activation_email_subject.txt",
+		"/home/brutal/Drivers/src/Drivers/accounts/models.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/main1.html",
+		"/home/brutal/Drivers/src/accounts/views.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/login.html",
+		"/home/brutal/Drivers/src/Drivers/static/landing/js/main.js",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/registration_form.html",
+		"/home/brutal/Drivers/src/Drivers/landing/users.py",
+		"/home/brutal/Drivers/src/Drivers/landing/forms.py",
+		"/home/brutal/Drivers/src/Drivers/landing/signals.py",
+		"/home/brutal/Drivers/src/Drivers/accounts/users.py",
+		"/home/brutal/Drivers/src/Drivers/registration/templates/registration/login.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/activate.html",
+		"/home/brutal/Drivers/src/Drivers/registration/templates/registration/password_reset_email.html",
+		"/home/brutal/Drivers/lib/python3.5/site-packages/django/db/backends/utils.py",
+		"/home/brutal/ingress_site/ingress/ingress/settings.py",
+		"/home/brutal/Drivers/src/Drivers/landing/models.py",
+		"/home/brutal/Drivers/src/Drivers/accounts/admin.py",
+		"/home/brutal/Drivers/src/Drivers/templates/base.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/activation_email.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/email/activation_email.txt",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/email/activation_email.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/email/activation_email_subject.txt",
+		"/home/brutal/Drivers/src/landing/urls.py",
+		"/home/brutal/Drivers/src/landing/views.py",
+		"/home/brutal/Drivers/src/registration/views.py",
+		"/home/brutal/Drivers/src/registration/forms.py",
+		"/home/brutal/Drivers/src/registration/templates/base.html",
+		"/home/brutal/Drivers/src/registry/models.py",
+		"/home/brutal/Drivers/src/registry/views.py",
+		"/home/brutal/Drivers/somth.txt",
+		"/home/brutal/Drivers/src/registration/templates/registration/activate.html",
+		"/home/brutal/Drivers/src/registration/templates/registration/activation_email_subject.txt",
+		"/home/brutal/Drivers/src/registration/templates/registration/activation_email.html",
+		"/home/brutal/Drivers/src/registration/templates/registration/registration_form.html",
+		"/home/brutal/Drivers/src/registration/templates/registration/registration_base.html",
+		"/home/brutal/Drivers/src/registration/templates/1base.html",
+		"/home/brutal/Drivers/src/registration/admin.py",
+		"/home/brutal/Drivers/src/registration/templates/registration/login.html",
+		"/home/brutal/Drivers/src/registration/urls.py",
+		"/home/brutal/Drivers/src/registration/templates/registration/registration_complete.html",
+		"/home/brutal/Drivers/django-registration-master/registration/forms.py",
+		"/home/brutal/Drivers/src/verified_email_field/models.py",
+		"/home/brutal/Drivers/src/verified_email_field/views.py",
+		"/home/brutal/Drivers/src/verifycocode/admin.py",
+		"/home/brutal/Drivers/src/verified_email_field/urls.py",
+		"/home/brutal/Drivers/src/verified_email_field/apps.py",
+		"/home/brutal/Drivers/Drivers/urls.py",
+		"/home/brutal/Drivers/Drivers/settings.py",
+		"/home/brutal/ingress_site/ingress/books/views.py",
+		"/home/brutal/ingress_site/ingress/books/models.py",
+		"/home/brutal/largos/test/django_mongo_test/blog/models.py",
+		"/home/brutal/largos/test/django_mongo_test/django_mongo_test/settings.py",
+		"/home/brutal/ingress_site/ingress/books/admin.py",
+		"/home/brutal/ingress_site/ingress/ingress/urls.py",
+		"/home/brutal/ingress_site/ingress/django-mongoadmin/setup.py",
+		"/home/brutal/largos/largos/largosadmin/Posts/admin.py",
+		"/home/brutal/largos/largos/largosadmin/largosadmin/urls.py",
+		"/home/brutal/largos/largos/largosadmin/largosadmin/settings.py",
+		"/home/brutal/dump/largosFeathers/largosFeathers/collections.yaml",
+		"/home/brutal/largos/largos/largosadmin/Posts/mongoadmin.py",
+		"/home/brutal/largos/largos/largosadmin/Posts/models.py",
+		"/usr/local/lib/python3.5/site-packages/mongonaut/templates/mongonaut/index.html",
+		"/usr/local/lib/python3.5/site-packages/django/template/defaulttags.py",
+		"/usr/local/lib/python3.5/site-packages/mongonaut/utils.py",
+		"/usr/local/lib/python3.5/site-packages/mongonaut/mixins.py",
+		"/usr/local/lib/python3.5/site-packages/mongonaut/urls.py",
+		"/home/brutal/trydjango19/src/trydjango19/urls.py",
+		"/home/brutal/trydjango19/src/posts/urls.py",
+		"/home/brutal/vagrant_getting_started/Vagrantfile",
+		"/home/brutal/trydjango19/src/posts/models.py",
+		"/home/brutal/ss_pesni/ss_pesni/settings.py",
+		"/home/brutal/trydjango19/src/posts/views.py",
+		"/home/brutal/vagrant_getting_started/bootstrap.sh",
+		"/home/brutal/trydjango19/src/templates/post_detail.html",
+		"/home/brutal/trydjango19/src/trydjango19/settings.py",
+		"/home/brutal/dump.py",
+		"/home/brutal/Робочий стіл/drop/dbcr.py",
+		"/home/brutal/backup/test.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"img",
+			"href=\"{% url 'landing:final' %}",
+			":result",
+			"result",
+			"final",
+			"final.html",
+			"UniqueSlugify",
+			"result.html",
+			"Final",
+			"final",
+			"Final",
+			"Action",
+			"reset",
+			"площа",
+			"user",
+			"next",
+			"{% blocktrans %}",
+			"{% endblocktrans %}",
+			"{% blocktrans %}",
+			"image",
+			"Site_ID",
+			"image",
+			"Image",
+			"image",
+			"imageSpec\n",
+			"avat",
+			"image",
+			"Image",
+			"image",
+			"avatar_thumbnail",
+			"login",
+			"site",
+			"Site",
+			"user.js",
+			"UniqueSlugify",
+			"DateTimeField",
+			"Fund",
+			"150",
+			"default",
+			"obj",
+			"filename",
+			"backupName",
+			"USER",
+			"PASS",
+			"dump",
+			"backup",
+			"\tdef __unicode__(self):\n\t\treturn self.title\n\n\tdef __str__(self):\n\t\treturn self.title",
+			"div",
+			"/mk_solver_poisson",
+			"poisson",
+			"if",
+			"y21",
+			"y24",
+			"y23",
+			"y22",
+			"y16",
+			"random",
+			"exam",
+			"examp",
+			"drop",
+			"epo",
+			"ae",
+			"GPU",
+			"np.array",
+			"\"F\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Drivers/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1116,
+								1116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 40.0
+	},
+	"pinned_build_system": "",
+	"project": "Drivers.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
