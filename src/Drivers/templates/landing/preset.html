@@ -4,12 +4,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Drive</title>
+    <title>Параметри моделювання</title>
     <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" type="image/jpeg" href="{% static 'img/launcher-icon-4x.png' %}">
+    <link rel="manifest" href="{% static 'manifest.json'%}">
     <link rel="stylesheet" href="{% static 'landing/css/lib/material.min.css' %}"">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'landing/css/main.css' %}">
-   
+    <style>
+        .b-data__item--plant .b-data__image, .b-data__item--subplant .b-data__image {
+            background: transparent;
+        }
+        .icon-wheat:before {
+            content: "\e919";
+            color: #baa462;
+        }
+        .icon-rape:before {
+            content: "\e90c";
+            color: #92d050;
+        }
+        .icon-soy:before {
+            content: "\e910";
+            color: #548235;
+        }
+        .icon-corn:before {
+            content: "\e902";
+            color: #ed7d31;
+        }
+        .icon-sunflower:before {
+            content: "\e914";
+            color: #ffc000;
+        }
+
+        .b-data__image:before {
+            font-size: 36px;
+        }
+    </style>
 </head>
 <body class="main">
 <header class="b-header">

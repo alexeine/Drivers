@@ -15,14 +15,14 @@
     "teamInvestment1": "Investment of machine operators",
     "teamInvestment1Info": "Total sum of machine operators' investment",
     "teamInvestment2": "Investment of plant team",
-    "teamInvestment2Info": "Total sum plant employees investment",
+    "teamInvestment2Info": "Total sum of plant employees investment",
     "rentability": "Capital profitability",
     "rentabilityInfo": "Profitability of plant's capital",
     "investmentRentability": "Profitability of investment",
     "investmentRentabilityInfo": "Profitability of partners' investment",
     "profit": "Profit of investment",
     "profitInfo": "Profit of your investment",
-    "distribution": "Crop distribution",
+    "distribution": "Crop distribution in 2017",
     "areaTitle": "Area of your responsibility",
     "settings": "Settings",
     "position": "Your position",
@@ -55,6 +55,8 @@
     "movespeedUnit": "km/h",
     "depth": "Depth of seeding",
     "depthUnit": "cm from surface",
+    "height": "Height of bar",
+    "heightUnit": "cm",
     "perform": "Perform with chosen parameters",
     "january": "January",
     "february": "February",
@@ -79,6 +81,12 @@
     "tillage": "Tillage",
     "seeding": "Seeding",
     "spraying": "Spraying",
-    "final": "Total impact of techprocess violation"
+    "final": "Total impact of techprocess violation",
+    "wheat": "Winter wheat",
+    "rape": "Winter rape",
+    "soy": "Soy",
+    "corn": "Corn",
+    "sunflower": "Sunflower"
+
   }
 }

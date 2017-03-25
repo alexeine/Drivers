@@ -83,8 +83,7 @@ class Profile(models.Model):
     def get_ebitda_per_area(self):
         return int(float(self.ebitda)/self.area)
 
-    def get_profit(self):
-        return int((self.investment*self.investmentRentability)/100)
+    
 
     def get_rentability(self):
         
@@ -96,19 +95,36 @@ class Profile(models.Model):
         rent=(self.ebitda/self.total)
 
         if rent>=0.2:
-            return round((rent-0.2)*2*100,1)
+            invRent=round((rent-0.2)*2*100,1)
+            return invRent
         elif rent>=0.1 and rent<0.2:
-            return 0
+            invRent=0
+            return invRent
         else:
-            return round((-(0.1-rent)/1.1)*100 ,1)
+            invRent=round((-(0.1-rent)/1.1)*100 ,1)
+            return invRent
+
         
+    
+    def get_profit(self):
+        rent=(self.ebitda/self.total)
 
+        if rent>=0.2:
+            invRent=round((rent-0.2)*2*100,1)
+            return int((self.investment*invRent)/100)
+        elif rent>=0.1 and rent<0.2:
+            invRent=0
+            return int((self.investment*invRent)/100)
+        else:
+            invRent=round((-(0.1-rent)/1.1)*100 ,1)
+            return int((self.investment*invRent)/100)
 
+        
 def my_unique_check(text, uids):
     if text in uids:
         return False
     return not Profile.objects.filter(slug=text).exists()
-    
+  
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

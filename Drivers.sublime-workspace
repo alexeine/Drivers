@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"inv",
+				"invRent"
+			],
+			[
+				"to",
+				"total"
+			],
+			[
+				"as",
+				"as_view"
+			],
+			[
+				"inve",
+				"investmentRentability"
+			],
+			[
+				"re",
+				"rentability"
+			],
+			[
+				"in",
+				"investment"
+			],
+			[
 				"__",
 				"__call__"
 			],
@@ -30,10 +54,6 @@
 			[
 				"Ba",
 				"BASE_DIR"
-			],
-			[
-				"re",
-				"request"
 			],
 			[
 				"E",
@@ -70,10 +90,6 @@
 			[
 				"provisi",
 				"provision"
-			],
-			[
-				"in",
-				"instance"
 			],
 			[
 				"data",
@@ -200,21 +216,12 @@
 	"buffers":
 	[
 		{
-			"file": "src/Drivers/templates/landing/preset.html",
+			"file": "/home/brutal/backup/dump.py",
 			"settings":
 			{
-				"buffer_size": 15304,
+				"buffer_size": 2135,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/brutal/Завантаження/preset.html",
-			"settings":
-			{
-				"buffer_size": 14572,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -256,42 +263,53 @@
 	[
 		"/home/brutal/Drivers",
 		"/home/brutal/Drivers/src",
-		"/home/brutal/Drivers/src/Drivers",
-		"/home/brutal/Drivers/src/Drivers/static/landing",
-		"/home/brutal/Drivers/src/Drivers/static/landing/js",
-		"/home/brutal/Drivers/src/Drivers/templates/landing",
-		"/home/brutal/Drivers/src/Drivers/templates/registration"
+		"/home/brutal/Drivers/src/Drivers"
 	],
 	"file_history":
 	[
+		"/home/brutal/dump-postgresql-and-save-into-dropbox/const.cfg",
+		"/home/brutal/backup/const.cfg",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/preset.html",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/start.css",
+		"/home/brutal/Drivers/src/accounts/models.py",
+		"/home/brutal/Drivers/src/Drivers/registration/forms.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/action.html",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/final.html",
+		"/home/brutal/Drivers/requirements.txt",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/result.html",
+		"/home/brutal/Drivers/src/Drivers/registration/backends/default/urls.py",
+		"/home/brutal/Drivers/src/Drivers/settings.py",
+		"/home/brutal/Drivers/src/Drivers/registration/backends/default/views.py",
+		"/home/brutal/Drivers/src/Drivers/registration/models.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/choose.html",
+		"/home/brutal/Drivers/src/Drivers/landing/urls.py",
+		"/home/brutal/Drivers/src/manage.py",
+		"/home/brutal/Завантаження/choose.html",
+		"/home/brutal/Drivers/src/Drivers/registration/auth_urls.py",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/action.css",
+		"/home/brutal/Завантаження/action (1).html",
+		"/home/brutal/Drivers/src/Drivers/landing/views.py",
+		"/home/brutal/Drivers/src/Drivers/templates/landing/action1.html",
 		"/home/brutal/Drivers/src/Drivers/static/landing/js/getData.js",
+		"/home/brutal/Drivers/src/Drivers/static/landing/css/main.css",
+		"/home/brutal/Завантаження/action.html",
+		"/home/brutal/Drivers/src/Drivers/static/locale/en.json",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/login.html",
 		"/home/brutal/Завантаження/login.html",
-		"/home/brutal/Drivers/src/Drivers/templates/landing/action.html",
-		"/home/brutal/Drivers/src/Drivers/templates/landing/preset.html",
-		"/home/brutal/Drivers/requirements.txt",
-		"/home/brutal/Drivers/.gitignore",
-		"/home/brutal/Завантаження/action.html",
+		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_form.html",
 		"/home/brutal/Завантаження/preset.html",
-		"/home/brutal/Drivers/src/Drivers/landing/urls.py",
+		"/home/brutal/Drivers/.gitignore",
 		"/home/brutal/Drivers/src/Drivers/static/landing/js/lang.js",
-		"/home/brutal/Drivers/src/accounts/models.py",
-		"/home/brutal/Drivers/src/Drivers/landing/views.py",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/main.html",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/start.html",
 		"/home/brutal/Завантаження/start.html",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/start2.html",
-		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_form.html",
 		"/home/brutal/Drivers/src/Drivers/registration/views.py",
-		"/home/brutal/Drivers/src/Drivers/registration/models.py",
-		"/home/brutal/Drivers/src/Drivers/settings.py",
-		"/home/brutal/Drivers/src/Drivers/registration/forms.py",
 		"/home/brutal/Drivers/src/Drivers/urls.py",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/main12.html",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_email.html",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_subject.txt",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/password_reset_email_subject.txt",
-		"/home/brutal/Drivers/src/Drivers/registration/auth_urls.py",
 		"/home/brutal/Drivers/src/Drivers/templates/registration/activation_email_subject.txt",
 		"/home/brutal/Drivers/src/accounts/admin.py",
 		"/home/brutal/Drivers/src/Drivers/accounts/models.py",
@@ -370,28 +388,13 @@
 		"/home/brutal/trydjango19/src/templates/post_detail.html",
 		"/home/brutal/trydjango19/src/trydjango19/settings.py",
 		"/home/brutal/backup/dump.py",
-		"/home/brutal/backup/const.cfg",
 		"/home/brutal/dump.py",
 		"/home/brutal/Робочий стіл/drop/dbcr.py",
 		"/home/brutal/backup/test.py",
 		"/home/brutal/backup/const.py",
 		"/home/brutal/Робочий стіл/drop/dump.py",
 		"/home/brutal/trydjango19/src/posts/admin.py",
-		"/var/lib/postgresql/9.5/main/postgresql.auto.conf",
-		"/etc/postgresql/9.5/main/pg_hba.conf",
-		"/home/brutal/Робочий стіл/drop/appK.txt",
-		"/home/brutal/pythoncode/locationbot/const.py",
-		"/home/brutal/Робочий стіл/drop/dropbox_token.txt",
-		"/home/brutal/ingress_site/ingress/templates/contact_form.html",
-		"/home/brutal/ingress_site/ingress/contact/forms.py",
-		"/home/brutal/ingress_site/ingress/contact/views.py",
-		"/home/brutal/ingress_site/ingress/books/forms.py",
-		"/home/brutal/ingress_site/ingress/books/contact_form.html",
-		"/home/brutal/ingress_site/ingress/contact/__init__.py",
-		"/home/brutal/ingress_site/ingress/manage.py",
-		"/home/brutal/ingress_site/ingress/templates/search_form.html",
-		"/home/brutal/ingress_site/ingress/ingress/views.py",
-		"/home/brutal/ingress_site/ingress/templates/base.html"
+		"/var/lib/postgresql/9.5/main/postgresql.auto.conf"
 	],
 	"find":
 	{
@@ -410,6 +413,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"href=\"{% url 'landing:final' %}",
+			":result",
+			"result",
+			"final",
+			"final.html",
+			"UniqueSlugify",
+			"result.html",
+			"Final",
+			"final",
+			"Final",
+			"Action",
 			"reset",
 			"площа",
 			"user",
@@ -485,62 +499,30 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/Drivers/templates/landing/preset.html",
+					"file": "/home/brutal/backup/dump.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15304,
+						"buffer_size": 2135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15271,
-								15271
+								1497,
+								1497
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4410.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/brutal/Завантаження/preset.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14572,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14388,
-								14388
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4326.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -627,7 +609,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 308.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
