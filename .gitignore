@@ -3,3 +3,6 @@
 bin/
 include/
 lib/
+pip-selfcheck.json
+Drivers.sublime-project
+Drivers.sublime-workspase
