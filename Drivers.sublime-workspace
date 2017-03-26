@@ -219,7 +219,7 @@
 			"file": "Drivers/settings.py",
 			"settings":
 			{
-				"buffer_size": 4029,
+				"buffer_size": 3919,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -261,11 +261,18 @@
 	},
 	"expanded_folders":
 	[
-		"/home/brutal/Drivers"
+		"/home/brutal/Drivers/Drivers"
 	],
 	"file_history":
 	[
+		"/home/brutal/Drivers/Drivers.sublime-project",
 		"/home/brutal/Drivers/Drivers/accounts/__init__.py",
+		"/home/brutal/Drivers/Drivers/registration/__init__.py",
+		"/home/brutal/Drivers/profiles/__init__.py",
+		"/home/brutal/Drivers/Drivers/accounts/views.py",
+		"/home/brutal/Drivers/Drivers/accounts/apps.py",
+		"/home/brutal/Drivers/Drivers/settings.py",
+		"/home/brutal/Drivers/Drivers/landing/apps.py",
 		"/home/brutal/Завантаження/action_modified.html",
 		"/home/brutal/Drivers/requirements.txt",
 		"/home/brutal/Drivers/src/Drivers/templates/landing/action.html",
@@ -362,7 +369,6 @@
 		"/home/brutal/Drivers/src/verified_email_field/urls.py",
 		"/home/brutal/Drivers/src/verified_email_field/apps.py",
 		"/home/brutal/Drivers/Drivers/urls.py",
-		"/home/brutal/Drivers/Drivers/settings.py",
 		"/home/brutal/ingress_site/ingress/books/views.py",
 		"/home/brutal/ingress_site/ingress/books/models.py",
 		"/home/brutal/largos/test/django_mongo_test/blog/models.py",
@@ -386,13 +392,7 @@
 		"/home/brutal/vagrant_getting_started/Vagrantfile",
 		"/home/brutal/trydjango19/src/posts/models.py",
 		"/home/brutal/ss_pesni/ss_pesni/settings.py",
-		"/home/brutal/trydjango19/src/posts/views.py",
-		"/home/brutal/vagrant_getting_started/bootstrap.sh",
-		"/home/brutal/trydjango19/src/templates/post_detail.html",
-		"/home/brutal/trydjango19/src/trydjango19/settings.py",
-		"/home/brutal/dump.py",
-		"/home/brutal/Робочий стіл/drop/dbcr.py",
-		"/home/brutal/backup/test.py"
+		"/home/brutal/trydjango19/src/posts/views.py"
 	],
 	"find":
 	{
@@ -502,15 +502,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4029,
+						"buffer_size": 3919,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1116,
-								1116
+								1166,
+								1166
 							]
 						],
 						"settings":
@@ -519,8 +519,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 252.0,
+						"translation.x": 0.0,
+						"translation.y": 924.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
